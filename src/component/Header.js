@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "../lagacy/assets/img/logobyi.png"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
+import { HashLink as Link } from 'react-router-hash-link';
 import { profile } from "../about/Profile"
+import { visiMisi } from "../about/Vision"
+import { pengurus } from "../about/Pengurus"
+import { legalitas } from "../about/Legalitas"
 
 function Header() {
     const root = "/"
-    const visiMisi = "/about/visimisi.html#profil";
-    const pengurus = "/about/pengurus.html#legal"
-    const legal = "/about/legalitas.html#legal"
 
     const album = "/album.html#album"
 
@@ -43,19 +44,20 @@ function Header() {
                     <li className="nav-item"><Link className="nav-link js-scroll-trigger" to={root}>Home</Link></li>
                     <li className="dropdown mr-3">
                         <div className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href={root}>Tentang Kami</a>
+                            <div className="nav-link js-scroll-trigger">Tentang Kami</div>
                             <div className="dropdown-content bg-dark">
-                                <Link to={profile}> Profil Yayasan BYI </Link>
-                                <a href={visiMisi}>Visi Misi</a>
-                                <a href={pengurus}>Kepengurusan</a>
-                                <a href={legal}>Legalitas</a>
+                                <Link to={profile+"#profil"}> Profil Yayasan BYI </Link>
+                                <Link to={visiMisi+"#profil"}>Visi Misi</Link>
+                                <Link to={pengurus+"#legal"}>Kepengurusan</Link>
+                                <Link to={legalitas+"#legal"}>Legalitas</Link>
                             </div>
                         </div>
                     </li>
-                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href={album}>Dokumentasi</a></li>
+                    {/* TODO dokumentasi */}
+                    <li className="nav-item"><div className="nav-link js-scroll-trigger" href={album}>Dokumentasi</div></li>
                     <li className="dropdown mr-3">
                         <div className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href={root}>Program Kerja</a>
+                            <div className="nav-link js-scroll-trigger" href={root}>Program Kerja</div>
                             <div className="dropdown-content bg-dark">
                                 <a href={program1}>Pendidikan dan Pembinaan Pondok Tahfidz Yatim & Dhuafa</a>
                                 <a href={program2}>Pembangunan dan Pembinaan Kampung Tauhid</a>

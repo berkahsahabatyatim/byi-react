@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../component/Header";
 import Masthead from "../component/Masthead";
 
-export const profile = "profile"
+export const profile = "/profile"
 class Profile extends Component {
 
     render() {

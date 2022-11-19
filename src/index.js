@@ -9,24 +9,36 @@ import {
     RouterProvider,
     // Route,
 } from "react-router-dom";
-import Notfound from './notfound/Notfound';
+import Notfound from './notfound/Notfound'
 import { profile } from "./about/Profile"
+import { visiMisi, Vision } from "./about/Vision"
+import { pengurus, Pengurus } from "./about/Pengurus"
+import { Legalitas, legalitas } from './about/Legalitas';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         errorElement: <Notfound />,
-        // children: [
-        //     {
-        //         path: "profile",
-        //         element: <Profile />
-        //     },
-        // ],
+        children: [
+
+        ],
     },
     {
         path: profile,
         element: <Profile />
+    },
+    {
+        path: visiMisi,
+        element: <Vision />
+    },
+    {
+        path: pengurus,
+        element: <Pengurus />
+    },
+    {
+        path: legalitas,
+        element: <Legalitas />
     },
 ]);
 
