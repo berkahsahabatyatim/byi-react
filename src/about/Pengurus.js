@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "../component/Footer"
 import Header from "../component/Header"
 import Masthead from "../component/Masthead"
 
@@ -77,8 +78,6 @@ export function Pengurus() {
                 </div>
             </div>
         </div>
-        <footer className="bg-light py-5">
-            <div className="container"><div className="small text-center text-muted">Copyright © 2021 - Start Bootstrap - Berkah Yatim Indonesia</div></div>
-        </footer>
+        <Footer/>
     </div>)
 }

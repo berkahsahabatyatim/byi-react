@@ -14,6 +14,7 @@ import { profile } from "./about/Profile"
 import { visiMisi, Vision } from "./about/Vision"
 import { pengurus, Pengurus } from "./about/Pengurus"
 import { Legalitas, legalitas } from './about/Legalitas';
+import { Program, program, loader } from './program/Program';
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,12 @@ const router = createBrowserRouter([
     {
         path: legalitas,
         element: <Legalitas />
+    },
+    {
+        path: program(":id"),
+        element: <Program />,
+        loader: loader,
+        errorElement: <Notfound />,
     },
 ]);
 

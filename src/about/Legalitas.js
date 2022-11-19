@@ -6,6 +6,7 @@ import barcode from "../lagacy/assets/img/profil/Akta berbarcode YBYI-1.jpg"
 import npwp from "../lagacy/assets/img/profil/SK NPWP.jpg"
 import upz from "../lagacy/assets/img/profil/UPZ1.jpg"
 import upz2 from "../lagacy/assets/img/profil/UPZ2.jpg"
+import Footer from "../component/Footer"
 
 export const legalitas = "/legalitas"
 
@@ -94,8 +95,6 @@ export function Legalitas() {
             </div>
 
         </div>
-        <footer className="bg-light py-5">
-            <div className="container"><div className="small text-center text-muted">Copyright © 2021 - Start Bootstrap - Berkah Yatim Indonesia</div></div>
-        </footer>
+        <Footer/>
     </div>)
 }

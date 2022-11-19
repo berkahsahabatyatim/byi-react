@@ -6,24 +6,13 @@ import { profile } from "../about/Profile"
 import { visiMisi } from "../about/Vision"
 import { pengurus } from "../about/Pengurus"
 import { legalitas } from "../about/Legalitas"
+import { program } from "../program/Program"
 
 function Header() {
     const root = "/"
 
     const album = "/album.html#album"
-
-    const program1 = "/program/pondok.html#services"
-    const program2 = "/program/pondok.html#services"
-    const program3 = "/program/beasiswa.html"
-    const program4 = "/program/lahan.html"
-    const program5 = "/program/masjid.html"
-    const program6 = "/program/pondok.html#services"
-    const program7 = "/program/ekonomi.html"
-    const program8 = "/program/santripreneur.html"
-    const program9 = "/program/bantuan-bencana.html"
-    const program10 = "/program/santripreneur.html"
-    const program11 = "/program/santripreneur.html"
-
+    
     const donasi = "/donasi.html#donate"
     const kegiatan = "/kegiatan-byi.html#activity"
     const contact = "#contact"
@@ -46,10 +35,10 @@ function Header() {
                         <div className="nav-item">
                             <div className="nav-link js-scroll-trigger">Tentang Kami</div>
                             <div className="dropdown-content bg-dark">
-                                <Link to={profile+"#profil"}> Profil Yayasan BYI </Link>
-                                <Link to={visiMisi+"#profil"}>Visi Misi</Link>
-                                <Link to={pengurus+"#legal"}>Kepengurusan</Link>
-                                <Link to={legalitas+"#legal"}>Legalitas</Link>
+                                <Link to={profile + "#profil"}> Profil Yayasan BYI </Link>
+                                <Link to={visiMisi + "#profil"}>Visi Misi</Link>
+                                <Link to={pengurus + "#legal"}>Kepengurusan</Link>
+                                <Link to={legalitas + "#legal"}>Legalitas</Link>
                             </div>
                         </div>
                     </li>
@@ -59,17 +48,17 @@ function Header() {
                         <div className="nav-item">
                             <div className="nav-link js-scroll-trigger" href={root}>Program Kerja</div>
                             <div className="dropdown-content bg-dark">
-                                <a href={program1}>Pendidikan dan Pembinaan Pondok Tahfidz Yatim & Dhuafa</a>
-                                <a href={program2}>Pembangunan dan Pembinaan Kampung Tauhid</a>
-                                <a href={program3}>Beasiswa Pendidikan Formal untuk Yatim & Dhuafa</a>
-                                <a href={program4}>Pembebasan Lahan untuk Pondok Tahfidz Yatim & Dhuafa</a>
-                                <a href={program5}>Pembangunan Masjid</a>
-                                <a href={program6}>Pembangunan Pondok Tahfidz Yatim & Dhuafa</a>
-                                <a href={program7}>Pemberdayaan Ekonomi Masyarakat</a>
-                                <a href={program8}>Kafalah Du\'at</a>
-                                <a href={program9}>Bantuan Kemanusiaan</a>
-                                <a href={program10}>Pembinaan Pemuda Berdaya</a>
-                                <a href={program11}>Pengelolaan Wakaf Produktif</a>
+                                <Link to={program("pondok")}>Pendidikan dan Pembinaan Pondok Tahfidz Yatim & Dhuafa</Link>
+                                <Link to={program("pondok")}>Pembangunan dan Pembinaan Kampung Tauhid</Link>
+                                <Link to={program("beasiswa")}>Beasiswa Pendidikan Formal untuk Yatim & Dhuafa</Link>
+                                <Link to={program("lahan")}>Pembebasan Lahan untuk Pondok Tahfidz Yatim & Dhuafa</Link>
+                                <Link to={program("masjid")}>Pembangunan Masjid</Link>
+                                <Link to={program("pondok")}>Pembangunan Pondok Tahfidz Yatim & Dhuafa</Link>
+                                <Link to={program("ekonomi")}>Pemberdayaan Ekonomi Masyarakat</Link>
+                                <Link to={program("santripreneur")}>Kafalah Du\'at</Link>
+                                <Link to={program("bantuan-bencana")}>Bantuan Kemanusiaan</Link>
+                                <Link to={program("santripreneur")}>Pembinaan Pemuda Berdaya</Link>
+                                <Link to={program("santripreneur")}>Pengelolaan Wakaf Produktif</Link>
                             </div>
                         </div>
                     </li>
