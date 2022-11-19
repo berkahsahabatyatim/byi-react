@@ -1,15 +1,18 @@
 import React, { Component } from "react";
+import Header from "../component/Header";
 import Masthead from "../component/Masthead";
 
+export const profile = "profile"
 class Profile extends Component {
 
     render() {
         return (<div>
+            <Header />
             <Masthead buttonLabel="Lihat Profil" target="#profil" />
-            <div class="bg-light">
-                <div id="profil" class="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-justify text-dark" >
-                    <div class="entry-content">
-                        <div class='image-full'></div>
+            <div className="bg-light">
+                <div id="profil" className="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-justify text-dark" >
+                    <div className="entry-content">
+                        <div className="image-full"></div>
                         <p><strong>Berkah Yatim Indonesia (BYI)</strong></p>
                         <p>Berkah Yatim Indonesia adalah sebuah Yayasan yang berdiri pada akhir tahun 2020. Didorong oleh idealisme tulus serta keinginan untuk memberikan sumbangan terbaik bagi umat dan bangsa guna mencetak generasi yang bermanfaat bagi banyak orang dan menjadi generasi penolong agama Allah. </p>
                         <p>Berawal dari sebuah renungan sederhana, dimana banyak sekolah-sekolah islam yang berkualitas dan menghasilkan hasil anak- anak islam yang berkualitas pula. Namun bayaran sekolah berkualitas itu amatlah mahal karena sesuai dengan kualitas pendidikannya. Sehingga terkesan sekolah berkualitas itu untuk anak-anak yang memiliki kemampuan finansial orang tuanya yang cukup. </p>
@@ -21,8 +24,8 @@ class Profile extends Component {
                 </div>
             </div>
 
-            <footer class="bg-light py-5">
-                <div class="container"><div class="small text-center text-muted">Copyright © 2021 - Start Bootstrap - Berkah Yatim Indonesia</div></div>
+            <footer className="bg-light py-5">
+                <div className="container"><div className="small text-center text-muted">Copyright © 2021 - Start Bootstrap - Berkah Yatim Indonesia</div></div>
             </footer>
         </div>)
     }

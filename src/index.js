@@ -7,15 +7,26 @@ import * as serviceWorker from './serviceWorker';
 import {
     createBrowserRouter,
     RouterProvider,
-    Route,
+    // Route,
 } from "react-router-dom";
 import Notfound from './notfound/Notfound';
+import { profile } from "./about/Profile"
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
-        errorElement: <Notfound/>
+        element: <App />,
+        errorElement: <Notfound />,
+        // children: [
+        //     {
+        //         path: "profile",
+        //         element: <Profile />
+        //     },
+        // ],
+    },
+    {
+        path: profile,
+        element: <Profile />
     },
 ]);
 
