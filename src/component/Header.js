@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../../lagacy/assets/img/logobyi.png"
+import logo from "../lagacy/assets/img/logobyi.png"
 
 class Header extends Component {
     render() {
