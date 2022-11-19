@@ -101,7 +101,15 @@ function Notfound() {
             nav.dataset.state === "closed" ? nav.dataset.state = "open" : nav.dataset.state = "closed";
         });
     }, [])
-    return (<div>
+    return (<div style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "Nunito Sans",
+        color: "#0e0620",
+        fontSize: "1em",
+        height: "100%"
+    }}>
         <div class="hamburger-menu">
             <button class="burger" data-state="closed">
                 <span></span>
@@ -109,8 +117,12 @@ function Notfound() {
                 <span></span>
             </button>
         </div>
-        <nav data-state="closed">
-            <ul>
+        <nav class="navf" data-state="closed">
+            <ul style={{
+                listStyleType: "none",
+                webkitPaddingStart: "35px",
+                paddingInlineStart: "35px"
+            }}>
                 <li>
                     <a href="https://berkahsahabatyatim.com/">Halaman Utama</a>
                 </li>
@@ -123,7 +135,10 @@ function Notfound() {
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 align-self-center">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        <svg style={{
+                            width: "100%",
+                            visibility: "hidden"
+                        }} version="1.1" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 800 600">
                             <g>
                                 <defs>
@@ -378,11 +393,15 @@ function Notfound() {
                         </svg>
                     </div>
                     <div class="col-md-6 align-self-center">
-                        <h1>Maaf</h1>
-                        <h2>Halaman tidak ditemukan..</h2>
+                        <h1 style={{
+                            fontSize: "7.5em",
+                            margin: "15px 0px",
+                            fontWeight: "bold"
+                        }}>Maaf</h1>
+                        <h2 style={{ fontWeight: "bold" }}>Halaman tidak ditemukan..</h2>
                         <p>Mungkin url nya salah. Silakan cek kembali..</p>
-                        <a href="https://berkahsahabatyatim.com/"><button class="btn green">Home</button></a>
-                        <a href="https://berkahsahabatyatim.com/Donasi"><button class="btn green">Donasi</button></a>
+                        <a href="https://berkahsahabatyatim.com/"><button class="btnf green mr-2">Home</button></a>
+                        <a href="https://berkahsahabatyatim.com/Donasi"><button class="btnf green">Donasi</button></a>
                     </div>
                 </div>
             </div>
