@@ -1,53 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import Profile from './about/Profile'
 import * as serviceWorker from './serviceWorker';
 import {
     createBrowserRouter,
     RouterProvider,
     // Route,
 } from "react-router-dom";
-import Notfound from './notfound/Notfound'
-import { profile } from "./about/Profile"
-import { visiMisi, Vision } from "./about/Vision"
-import { pengurus, Pengurus } from "./about/Pengurus"
-import { Legalitas, legalitas } from './about/Legalitas';
-import { Program, program, loader } from './program/Program';
+import { routerData } from './router';
 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
-        errorElement: <Notfound />,
-        children: [
-
-        ],
-    },
-    {
-        path: profile,
-        element: <Profile />
-    },
-    {
-        path: visiMisi,
-        element: <Vision />
-    },
-    {
-        path: pengurus,
-        element: <Pengurus />
-    },
-    {
-        path: legalitas,
-        element: <Legalitas />
-    },
-    {
-        path: program(":id"),
-        element: <Program />,
-        loader: loader,
-        errorElement: <Notfound />,
-    },
-]);
+const router = createBrowserRouter(routerData);
 
 ReactDOM.render(
     <React.StrictMode>

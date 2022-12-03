@@ -10163,6 +10163,16 @@ header.bantuan-bencana {
   background-size: cover;
 }
 
+header.donasi {
+  padding-top: 10rem;
+  padding-bottom: calc(11rem - 0.5rem);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 1%), url("../assets/img/portfolio/fullsize/2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
 header.masthead h1 {
   font-size: 2.25rem;
 }
@@ -10357,4 +10367,9 @@ table, th, td {
 
 .just-line-break {
   white-space: pre-line;
+}
+
+
+.loadingImg {
+  background: transparent url("https://giphy.com/embed/3oEduGWokTS2eWjPLa") no-repeat scroll center center;
 }
