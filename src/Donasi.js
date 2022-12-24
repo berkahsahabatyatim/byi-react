@@ -19,7 +19,7 @@ export function Donasi() {
                         <div class="text-dark mb-3">
                             Salurkan bantuan Anda dalam mendukung program-program yayasan melalui portal donasi berikut
                         </div>
-                        <a href="https://berkahsahabatyatim.com/Donasi">
+                        <a href="../Donasi/home.html">
                             <div class="btn btn-primary mb-3">Web Donasi</div>
                         </a>
                         <div class="text-dark">
