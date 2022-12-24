@@ -12,6 +12,7 @@ import { Donasi, donasi } from './Donasi';
 import { Article, article, articleLoader } from './article/Article';
 import { App } from "./App"
 import { Dokum, dokum, dokumLoader } from "./Dokum"
+import { Kajian, kajian, kajianLoader } from "./kajian/Kajian"
 
 export const routerData = [
     {
@@ -55,5 +56,10 @@ export const routerData = [
         path: dokum,
         element: <App><Dokum /></App>,
         loader: dokumLoader,
+    },
+    {
+        path: kajian,
+        element: <App><Kajian /></App>,
+        loader: kajianLoader,
     }
 ]
