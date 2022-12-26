@@ -5,7 +5,7 @@ import Header from '../component/Header';
 import Masthead from '../component/Masthead';
 
 export const kajian = (param) => {
-    return `/kajian/` + param;
+    return "/kajian/" + param;
 }
 
 export function kajianLoader({ params }) {
