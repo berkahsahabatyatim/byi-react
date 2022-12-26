@@ -13,6 +13,7 @@ import { Article, article, articleLoader } from './article/Article';
 import { App } from "./App"
 import { Dokum, dokum, dokumLoader } from "./Dokum"
 import { Kajian, kajian, kajianLoader } from "./kajian/Kajian"
+import { Activity, activity } from "./activity/Activity"
 
 export const routerData = [
     {
@@ -61,5 +62,9 @@ export const routerData = [
         path: kajian(":id"),
         element: <App><Kajian /></App>,
         loader: kajianLoader,
+    },
+    {
+        path: activity,
+        element: <App><Activity /></App>,
     }
 ]
