@@ -58,7 +58,7 @@ export const routerData = [
         loader: dokumLoader,
     },
     {
-        path: kajian,
+        path: kajian(":id"),
         element: <App><Kajian /></App>,
         loader: kajianLoader,
     }
