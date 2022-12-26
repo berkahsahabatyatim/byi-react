@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import gmail from "../../lagacy/assets/img/gmail.png"
-import bsi from "../../lagacy/assets/img/bsi.png"
-import mandiri from "../../lagacy/assets/img/mandiri.jpg"
-import bni from "../../lagacy/assets/img/bni.jpg"
-import logo from "../../lagacy/assets/img/logobyi-white.jpeg"
+import gmail from "../lagacy/assets/img/gmail.png"
+import bsi from "../lagacy/assets/img/bsi.png"
+import mandiri from "../lagacy/assets/img/mandiri.jpg"
+import bni from "../lagacy/assets/img/bni.jpg"
+import logo from "../lagacy/assets/img/logobyi-white.jpeg"
 class Footer extends Component {
     render() {
         return <footer id="donate" className="wrapper site-footer mb-3 bg-light text-dark" role="contentinfo">

@@ -1,40 +1,27 @@
 import React, { Component } from "react"
-import "../lagacy/css/styless.css"
-import full1 from '../lagacy/assets/img/portfolio/fullsize/1.jpg'
-import full2 from '../lagacy/assets/img/portfolio/fullsize/2.jpg'
-import full3 from '../lagacy/assets/img/portfolio/fullsize/3.jpg'
-import full4 from '../lagacy/assets/img/portfolio/fullsize/4.jpg'
-import full5 from '../lagacy/assets/img/portfolio/fullsize/5.jpg'
-import full6 from '../lagacy/assets/img/portfolio/fullsize/6.jpg'
-import thumb1 from '../lagacy/assets/img/portfolio/thumbnails/1.jpg'
-import thumb2 from '../lagacy/assets/img/portfolio/thumbnails/2.jpg'
-import thumb3 from '../lagacy/assets/img/portfolio/thumbnails/3.jpg'
-import thumb4 from '../lagacy/assets/img/portfolio/thumbnails/4.jpg'
-import thumb5 from '../lagacy/assets/img/portfolio/thumbnails/5.jpg'
-import thumb6 from '../lagacy/assets/img/portfolio/thumbnails/6.jpg'
-import Footer from "./component/Footer"
-import Header from "./component/Header"
+import './lagacy/css/styless.css'
+import full1 from './lagacy/assets/img/portfolio/fullsize/1.jpg'
+import full2 from './lagacy/assets/img/portfolio/fullsize/2.jpg'
+import full3 from './lagacy/assets/img/portfolio/fullsize/3.jpg'
+import full4 from './lagacy/assets/img/portfolio/fullsize/4.jpg'
+import full5 from './lagacy/assets/img/portfolio/fullsize/5.jpg'
+import full6 from './lagacy/assets/img/portfolio/fullsize/6.jpg'
+import thumb1 from './lagacy/assets/img/portfolio/thumbnails/1.jpg'
+import thumb2 from './lagacy/assets/img/portfolio/thumbnails/2.jpg'
+import thumb3 from './lagacy/assets/img/portfolio/thumbnails/3.jpg'
+import thumb4 from './lagacy/assets/img/portfolio/thumbnails/4.jpg'
+import thumb5 from './lagacy/assets/img/portfolio/thumbnails/5.jpg'
+import thumb6 from './lagacy/assets/img/portfolio/thumbnails/6.jpg'
+import Footer from './component/Footer'
+import Header from './component/Header'
+import Masthead from "./component/Masthead"
 
 class Home extends Component {
     render() {
         return (
-            <div className="oke">
-                <Header></Header>
-                <header className="masthead">
-                    <div className="container h-100">
-                        <div className="row h-100 align-items-center justify-content-center text-center">
-                            <div className="col-lg-10 align-self-end">
-                                <h1 className="text-uppercase text-white font-weight-bold">Yayasan Berkah Yatim Indonesia</h1>
-                                <hr className="divider my-4" />
-                            </div>
-                            <div className="col-lg-8 align-self-baseline">
-                                <p className="text-white-75 font-weight-light mb-5">Membangun Generasi Qurani, Berkarakter Dan Visioner
-                                    Yang Berpegang Teguh Pada Al Qur'an & Sunnah</p>
-                                <a className="btn btn-primary btn-xl js-scroll-trigger" href="#about">Lihat lebih lanjut</a>
-                            </div>
-                        </div>
-                    </div>
-                </header>
+            <div>
+                <Header/>
+                <Masthead buttonLabel="Lihat Lebih Lanjut" target="#about"/>
                 <section className="page-section bg-primary" id="about">
                     <div className="container">
                         <div className="row justify-content-center">
