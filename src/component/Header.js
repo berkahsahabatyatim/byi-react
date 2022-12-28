@@ -9,11 +9,11 @@ import { program } from "../program/Program"
 import { donasi } from "../Donasi"
 import { article } from "../article/Article"
 import { dokum } from "../Dokum"
+import { activity } from "../activity/Activity"
 
 function Header() {
     const root = "/"
-
-    const kegiatan = "/kegiatan-byi.html#activity"
+    const kegiatan = activity
     const contact = "/#contact"
 
     const article1 = article(1) + "#main-content"

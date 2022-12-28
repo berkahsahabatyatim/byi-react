@@ -62,9 +62,11 @@ export const routerData = [
         path: kajian(":id"),
         element: <App><Kajian /></App>,
         loader: kajianLoader,
+        errorElement: <Notfound />,
     },
     {
         path: activity,
         element: <App><Activity /></App>,
+        
     }
 ]
