@@ -4,7 +4,7 @@ import Masthead from "./component/Masthead"
 import axios from "axios"
 import { useLoaderData } from "react-router-dom"
 import Footer from "./component/Footer"
-import { Helmet } from "react-helmet"
+import SEO from "./component/SEO";
 
 export async function dokumLoader() {
     try {
@@ -27,7 +27,11 @@ export function Dokum() {
     var { data } = useLoaderData()
     console.log(data);
     return (<div>
-        <DokumHelmet />
+        <SEO
+            title='Learning React Helmet!'
+            description='Beginner friendly page for learning React Helmet.'
+            name='Company name.'
+            type='article' />
         <Header />
         <Masthead buttonLabel="Lihat Album" target="#album" />
         <div class="container page-top mt-5">
@@ -42,14 +46,4 @@ export function Dokum() {
         </div>
         <Footer />
     </div>)
-}
-
-function DokumHelmet() {
-    return (<Helmet>
-        <meta charSet="utf-8" />
-        <meta property="og:title" content="Dokumentasi" />
-        <meta property="og:description" content="Dokumentasi Yayasan BYI" />
-        <meta property="og:image"
-            content="https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg" />
-    </Helmet>)
 }

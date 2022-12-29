@@ -1,5 +1,7 @@
 import React, { useEffect } from "react"
 import { useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async"
+const helmetContext = {}
 
 export function App(props) {
     const { pathname, hash, key } = useLocation();
@@ -21,6 +23,8 @@ export function App(props) {
         }
     }, [pathname, hash, key]); // do this on route change
     return (<div>
-        {props.children}
+        <HelmetProvider context={helmetContext}>
+            {props.children}
+        </HelmetProvider>
     </div>)
 }
