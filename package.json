@@ -7,12 +7,12 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "yarn cross-env NODE_ENV=development babel-node src/index",
-    "watch": "yarn cross-env NODE_ENV=development nodemon src/index",
+    "start": "cross-env NODE_ENV=development babel-node src/index",
+    "watch": "cross-env NODE_ENV=development nodemon src/index",
     "build": "npm-run-all -p build:client build:server build:node",
-    "build:client": "yarn cross-env NODE_ENV=production webpack --config webpack/client/prod.js",
-    "build:server": "yarn cross-env NODE_ENV=production webpack --config webpack/server/prod.js",
-    "build:node": "yarn cross-env NODE_ENV=production webpack --config webpack/node.js",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack/client/prod.js",
+    "build:server": "cross-env NODE_ENV=production webpack --config webpack/server/prod.js",
+    "build:node": "cross-env NODE_ENV=production webpack --config webpack/node.js",
     "test": "jest",
     "lint": "eslint src/**/*.js"
   },
