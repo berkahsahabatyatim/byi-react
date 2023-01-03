@@ -3,6 +3,9 @@
   "version": "3.0.0",
   "description": "Server side rendering template for React 16",
   "main": "src/index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-node src/index",
     "watch": "cross-env NODE_ENV=development nodemon src/index",
