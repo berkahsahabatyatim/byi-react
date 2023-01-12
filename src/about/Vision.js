@@ -14,14 +14,13 @@ export function Vision() {
                 <div className="entry-content">
                     <p><strong>Visi Misi Yayasan Berkah Yatim Indonesia</strong></p>
                     <p><strong>Visi</strong></p>
-                    <p className="has-text-align-center">Mewujudkan pondok tahfidz yatim dan dhuafa berbasis kampung tauhid menuju kampung akhirat</p>
+                    <p className="has-text-align-center">Mewujudkan pondok tahfidz yatim dan dhuafa di Indonesia</p>
                     <p><strong>Misi</strong></p>
-                    <p>Membangun lembaga yang amanah dan profesional sebagai   	fasilitator kaum muslimin untuk membentuk generasi qurani 	menjadi hamba-hamba Allah yang bermanfaat bagi banyak 	orang   	dan bisa menolong Agama Allah.</p>
-                    <p>Memberikan pelayanan dan pendidikan terbaik bagi yatim dan 	dhu'afa</p>
-                    <p>Membangun dan membina kampung tauhid yang terintegrasi 	dengan pondok tahfidz yatim dan dhuafa di Indonesia</p>
+                    <p>Membangun lembaga yang amanah dan profesional sebagai fasilitator kaum muslimin untuk membentuk generasi qurani menjadi hamba-hamba Allah yang bermanfaat bagi banyak orang</p>
+                    <p>Membangun dan membina pondok tahfidz yatim & dhuafa berbasis kemandirian ekonomi di Indonesia</p>
                     <p>Mencetak sejuta penghafal Al-Qur'an</p>
                     <p>Memberdayakan ekonomi masyarakat</p>
-                    <p>Membangun Lembaga Filantropi untuk Pemberdayaan Ummat</p>
+                    <p>Menjadi Lembaga Filantropi untuk Pemberdayaan Ummat</p>
                     <br />
                 </div>
             </div>
