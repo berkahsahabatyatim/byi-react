@@ -22,9 +22,6 @@
     "build:app": "next build",
     "build:lambda": "netlify-lambda build src/lambda"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
