@@ -11,6 +11,7 @@
 /built-lambda
 
 /.netlify
+/.next/
 
 # misc
 .DS_Store
