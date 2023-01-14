@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Footer from '../src/component/Footer'
 import Header from '../src/component/Header'
 import Masthead from '../src/component/Masthead'
-import Helmets from '../src/component/Helmet'
+import Head from 'next/head'
 
 class Home extends Component {
     render() {
@@ -21,9 +21,14 @@ class Home extends Component {
 
         return (
             <div>
-                <Helmets/>
-                <Header/>
-                <Masthead buttonLabel="Lihat Lebih Lanjut" target="#about"/>
+                <Head>
+                    <title>Berkah Sahabat Yatim</title>
+                    <meta property="og:title" content="Berkah Sahabat Yatims" />
+                    <meta property="og:description" content="mantulity" />
+                    <meta property="og:image" content="https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg" />
+                </Head>
+                <Header />
+                <Masthead buttonLabel="Lihat Lebih Lanjut" target="#about" />
                 <section className="page-section bg-primary" id="about">
                     <div className="container">
                         <div className="row justify-content-center">

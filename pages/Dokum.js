@@ -4,7 +4,7 @@ import Header from '../src/component/Header'
 import Masthead from '../src/component/Masthead'
 import axios from "axios"
 import { useLoaderData } from "react-router-dom"
-import { Helmet } from "react-helmet"
+import Helmets from "../src/component/Helmet"
 
 export default function sipp() {
     return (<div>Hello</div>)
@@ -49,11 +49,11 @@ export function Dokum() {
 }
 
 function DokumHelmet() {
-    return (<Helmet>
+    return (<Helmets>
         <meta charSet="utf-8" />
         <meta property="og:title" content="Dokumentasi" />
         <meta property="og:description" content="Dokumentasi Yayasan BYI" />
         <meta property="og:image"
             content="https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg" />
-    </Helmet>)
+    </Helmets>)
 }

@@ -1,8 +1,8 @@
 import React from "react"
 import Footer from '../../../src/component/Footer'
 import Header from '../../../src/component/Header'
+import Helmets from "../../../src/component/Helmet"
 import Masthead from '../../../src/component/Masthead'
-import Helmets from '../../../src/component/Helmet'
 
 export const legalitas = "/legalitas"
 
@@ -13,7 +13,7 @@ export default function Legalitas() {
     const upz = "/assets/img/profil/UPZ1.jpg"
     const upz2 = "/assets/img/profil/UPZ2.jpg"
     return (<div>
-        <Helmets/>
+        <Helmets />
         <Header />
         <Masthead buttonLabel="Lihat Legalitas" target="#legal" />
         <div className="bg-light" id="legal">
