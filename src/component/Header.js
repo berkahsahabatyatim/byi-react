@@ -44,17 +44,17 @@ function Header() {
                         <div className="nav-item">
                             <div className="nav-link js-scroll-trigger" href={root}>Program Kerja</div>
                             <div className="dropdown-content bg-dark">
-                                <Link href={program("pondok")}>Pendidikan dan Pembinaan Pondok Tahfidz Yatim & Dhuafa</Link>
-                                <Link href={program("pondok")}>Pembangunan dan Pembinaan Kampung Tauhid</Link>
-                                <Link href={program("beasiswa")}>Beasiswa Pendidikan Formal untuk Yatim & Dhuafa</Link>
-                                <Link href={program("lahan")}>Pembebasan Lahan untuk Pondok Tahfidz Yatim & Dhuafa</Link>
-                                <Link href={program("masjid")}>Pembangunan Masjid</Link>
-                                <Link href={program("pondok")}>Pembangunan Pondok Tahfidz Yatim & Dhuafa</Link>
-                                <Link href={program("ekonomi")}>Pemberdayaan Ekonomi Masyarakat</Link>
-                                <Link href={program("santripreneur")}>Kafalah Du\'at</Link>
-                                <Link href={program("bantuan-bencana")}>Bantuan Kemanusiaan</Link>
-                                <Link href={program("santripreneur")}>Pembinaan Pemuda Berdaya</Link>
-                                <Link href={program("santripreneur")}>Pengelolaan Wakaf Produktif</Link>
+                                <a href={program("pondok")}>Pendidikan dan Pembinaan Pondok Tahfidz Yatim & Dhuafa</a>
+                                <a href={program("pondok")}>Pembangunan dan Pembinaan Kampung Tauhid</a>
+                                <a href={program("beasiswa")}>Beasiswa Pendidikan Formal untuk Yatim & Dhuafa</a>
+                                <a href={program("lahan")}>Pembebasan Lahan untuk Pondok Tahfidz Yatim & Dhuafa</a>
+                                <a href={program("masjid")}>Pembangunan Masjid</a>
+                                <a href={program("pondok")}>Pembangunan Pondok Tahfidz Yatim & Dhuafa</a>
+                                <a href={program("ekonomi")}>Pemberdayaan Ekonomi Masyarakat</a>
+                                <a href={program("santripreneur")}>Kafalah Du\'at</a>
+                                <a href={program("bantuan-bencana")}>Bantuan Kemanusiaan</a>
+                                <a href={program("santripreneur")}>Pembinaan Pemuda Berdaya</a>
+                                <a href={program("santripreneur")}>Pengelolaan Wakaf Produktif</a>
                             </div>
                         </div>
                     </li>

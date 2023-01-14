@@ -36,9 +36,9 @@ class Home extends Component {
                                 <h2 className="text-white mt-0">Yayasan Berkah Yatim Indonesia</h2>
                                 <hr className="divider light my-4" />
                                 <p className="text-white-75 mb-4">Membangun Peradaban Mengembalikan Kejayaan Ummat</p>
-                                <a className="btn btn-light btn-xl js-scroll-trigger col-md-4 mb-2 mr-1" href="profil.html">Profil</a>
+                                <a className="btn btn-light btn-xl js-scroll-trigger col-md-4 mb-2 mr-1" href="/about/profile#profil">Profil</a>
                                 <a className="btn btn-light btn-xl js-scroll-trigger col-md-4 ml-1"
-                                    href="album.html#album">Dokumentasi</a>
+                                    href="/dokumentasi#album">Dokumentasi</a>
                             </div>
                         </div>
                     </div>
