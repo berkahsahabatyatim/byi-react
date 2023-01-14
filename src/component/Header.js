@@ -1,16 +1,16 @@
 import React from "react";
 import Link from 'next/link';
-import { profile } from "../../pages/about/Profile"
-import { visiMisi } from "../../pages/about/Vision"
-import { pengurus } from "../../pages/about/Pengurus"
-import { program } from "../../pages/program/Program"
-import { donasi } from "../../pages/Donasi"
-import { article } from "../../pages/article/Article"
-import { dokum } from "../../pages/Dokum"
+import { profile } from "../../pages/about/profile"
+import { visiMisi } from "../../pages/about/visi-misi"
+import { donasi } from "../../pages/donasi"
+import { pengurus } from "../../pages/about/pengurus"
+import { program } from "../../pages/program"
+import { article } from "../../pages/article"
+import { dokum } from "../../pages/dokumentasi"
+import { kegiatan } from "../../pages/kegiatan"
 
 function Header() {
     const root = "/"
-    const kegiatan = '/kegiatan'
     const contact = "/#contact"
 
     const article1 = article(1) + "#main-content"
