@@ -1,8 +1,8 @@
 import React from "react"
-import Header from "../../component/Header"
-import Masthead from "../../component/Masthead"
-import Footer from "../../component/Footer"
-import Helmets from "../../component/Helmet"
+import Footer from '../../../src/component/Footer'
+import Header from '../../../src/component/Header'
+import Masthead from '../../../src/component/Masthead'
+import Helmets from '../../../src/component/Helmet'
 
 export const legalitas = "/legalitas"
 

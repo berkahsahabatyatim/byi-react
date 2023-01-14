@@ -1,11 +1,11 @@
 import React from "react"
-import Footer from "../component/Footer"
-import Header from "../component/Header"
-import Masthead from "../component/Masthead"
+import Footer from '../../src/component/Footer'
+import Header from '../../src/component/Header'
+import Masthead from '../../src/component/Masthead'
 
 export const visiMisi = "/visi-misi"
 
-export function Vision() {
+export default function Vision() {
     return (<div>
         <Header/>
         <Masthead buttonLabel="Lihat Visi&Misi" target="#profil" />

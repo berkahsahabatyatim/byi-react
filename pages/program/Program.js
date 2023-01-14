@@ -1,8 +1,13 @@
 import React from "react"
-import Footer from "../component/Footer"
-import Header from "../component/Header"
-import Masthead from "../component/Masthead"
+import Footer from '../../src/component/Footer'
+import Header from '../../src/component/Header'
+import Masthead from '../../src/component/Masthead'
 import { useLoaderData } from "react-router-dom"
+
+export default function sipp() {
+    return (<div>Hello</div>)
+}
+
 export const program = (param) => {
     return "/program/" + param
 }

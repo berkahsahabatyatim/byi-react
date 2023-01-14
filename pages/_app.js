@@ -1,4 +1,4 @@
-import ErrorBoundary from './component/ErrorBoundary'
+import ErrorBoundary from '../src/component/ErrorBoundary'
 import './lagacy/css/styless.css'
 import './notfound/Notfound.css'
 

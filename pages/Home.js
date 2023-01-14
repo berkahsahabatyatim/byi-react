@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import Footer from './component/Footer'
-import Header from './component/Header'
-import Masthead from "./component/Masthead"
+import Footer from '../src/component/Footer'
+import Header from '../src/component/Header'
+import Masthead from '../src/component/Masthead'
 
 class Home extends Component {
     render() {

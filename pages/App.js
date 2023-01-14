@@ -1,6 +1,10 @@
 import React, { useEffect } from "react"
 import { useLocation } from "react-router-dom";
 
+export default function sipp() {
+    return (<div>Hello</div>)
+}
+
 export function App(props) {
     const { pathname, hash, key } = useLocation();
 

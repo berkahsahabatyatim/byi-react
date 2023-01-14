@@ -1,10 +1,10 @@
 import React from "react"
-import Footer from "./component/Footer"
-import Header from "./component/Header"
-import Masthead from "./component/Masthead"
+import Footer from "../src/component/Footer"
+import Header from "../src/component/Header"
+import Masthead from "../src/component/Masthead"
 
 export const donasi = "/donasi"
-export function Donasi() {
+export default function Donasi() {
     return (<div>
         <Header/>
         <Masthead bg="donasi" buttonLabel="Lihat Profil" target="#donate" />

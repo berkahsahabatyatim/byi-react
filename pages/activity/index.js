@@ -1,12 +1,12 @@
 import React from 'react';
-import Footer from '../component/Footer';
-import Header from '../component/Header';
-import Masthead from '../component/Masthead';
+import Footer from '../../src/component/Footer'
+import Header from '../../src/component/Header'
+import Masthead from '../../src/component/Masthead'
 import kegiatan from "../lagacy/assets/img/kegiatan.jpeg"
 
 export const activity = '/kegiatan';
 
-export function Activity() {
+export default function Activity() {
     return (<>
     <Header/>
     <Masthead/>

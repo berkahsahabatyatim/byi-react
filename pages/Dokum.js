@@ -1,10 +1,14 @@
 import React from "react"
-import Header from "./component/Header"
-import Masthead from "./component/Masthead"
+import Footer from '../src/component/Footer'
+import Header from '../src/component/Header'
+import Masthead from '../src/component/Masthead'
 import axios from "axios"
 import { useLoaderData } from "react-router-dom"
-import Footer from "./component/Footer"
 import { Helmet } from "react-helmet"
+
+export default function sipp() {
+    return (<div>Hello</div>)
+}
 
 export async function dokumLoader() {
     try {

@@ -1,12 +1,12 @@
 import React from "react";
 import Link from 'next/link';
-import { profile } from "../about/Profile"
-import { visiMisi } from "../about/Vision"
-import { pengurus } from "../about/Pengurus"
-import { program } from "../program/Program"
-import { donasi } from "../Donasi"
-import { article } from "../article/Article"
-import { dokum } from "../Dokum"
+import { profile } from "../../pages/about/Profile"
+import { visiMisi } from "../../pages/about/Vision"
+import { pengurus } from "../../pages/about/Pengurus"
+import { program } from "../../pages/program/Program"
+import { donasi } from "../../pages/Donasi"
+import { article } from "../../pages/article/Article"
+import { dokum } from "../../pages/Dokum"
 
 function Header() {
     const root = "/"

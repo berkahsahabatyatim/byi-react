@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import axios from "axios"
-import Footer from '../component/Footer';
-import Header from '../component/Header';
-import Masthead from '../component/Masthead';
+import Footer from '../../src/component/Footer'
+import Header from '../../src/component/Header'
+import Masthead from '../../src/component/Masthead'
+
+export default function sipp() {
+    return (<div>Hello</div>)
+}
 
 export const kajian = (param) => {
     return "/kajian/" + param;
