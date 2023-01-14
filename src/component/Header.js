@@ -5,7 +5,7 @@ import { visiMisi } from "../../pages/about/visi-misi"
 import { donasi } from "../../pages/donasi"
 import { pengurus } from "../../pages/about/pengurus"
 import { program } from "../../pages/program/[id]"
-import { article } from "../../pages/article"
+import { article } from "../../pages/article/[id]"
 import { dokum } from "../../pages/dokumentasi"
 import { kegiatan } from "../../pages/kegiatan"
 

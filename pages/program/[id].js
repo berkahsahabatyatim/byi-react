@@ -9,8 +9,6 @@ export const program = (param) => {
 }
 
 export async function getStaticPaths() {
-    // Call an external API endpoint to get posts
-
     const posts = [
         { "id": "pondok", },
         { "id": "beasiswa", },
@@ -20,13 +18,10 @@ export async function getStaticPaths() {
         { "id": "santripreneur", },
         { "id": "bantuan-bencana", },
     ]
-    // Get the paths we want to pre-render based on posts
     const paths = posts.map((post) => ({
         params: { id: post.id },
     }))
-
-    // We'll pre-render only these paths at build time.
-    // { fallback: false } means other routes should 404.
+    console.log(paths)
     return { paths, fallback: false }
 }
 

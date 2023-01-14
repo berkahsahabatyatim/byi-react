@@ -4,16 +4,30 @@ import Footer from '../../src/component/Footer'
 import Header from '../../src/component/Header'
 import Masthead from '../../src/component/Masthead'
 
-export default function sipp() {
-    return (<div>Hello</div>)
+
+export async function getStaticPaths() {
+    const posts = [1, 2, 3, 4, 5, 6].map((e) => ({ id: `${e}` }))
+    const paths = posts.map((post) => ({
+        params: { id: post.id },
+    }))
+    console.log(paths)
+    return { paths, fallback: false }
+}
+
+export async function getStaticProps({ params }) {
+    console.log('cuyye',params)
+    const _data = JSON.stringify(articleLoader(params))
+    const data = JSON.parse(_data)
+    return { props: { data } }
 }
 
 export const article = (param) => {
     return "/article/" + param
 }
 
-export function articleLoader({ params }) {
-    switch (params.id) {
+export function articleLoader({ id }) {
+    console.log('cuyy',id)
+    switch (id) {
         case "1":
             return {
                 content: `<div class="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-justify text-dark"> <div class="entry-content"> <div class="image-full"></div> <h2>Manfaat &amp; Keutamaan Sedekah</h2> <p>&nbsp;</p> <p><em><strong>1.Manfaat Sedekah Dapat Menghapus Dosa</strong></em></p> <p>Manusia memang tidak luput dengan dosa. Kesempurnaannya dipertanyakan apakah kita pantas disebut makhluk yang sempurna padahal kita selalu enggan untuk meminta ampun dengan apa yang telah kita perbuat.</p> <p><em>Nabi Muhammad صلى الله عليه وسلم bersabda, “Sedekah itu dapat menghapus dosa sebagaimana air itu memadamkan api“.(HR. At-Tirmidzi).</em></p> <p>Sedekah, itulah cara mudah yang disediakan Allah agar dapat mengikis perbuatan-perbuatan dosa kita. Cukup dengan tersenyum saja, Anda sudah bersedekah karena senyum adalah salah satu sedekah termudah yang dapat kita sebarkan dengan mengukir garis senyum di bibir kita.</p> <p></p> <p><em><strong>2. Bersedekah Dapat Berbentuk Apa Saja</strong></em></p> <p>Bagaimana cara kita mendapatkan keutamaan bersedekah tetapi tidak mempunyai uang?</p> <p>Nabi Muhammad صلى الله عليه وسلم bersabda: “<em>Kamu menyingkirkan batu, duri dan tulang dari tengah jalan itu adalah sedekah bagimu.</em>”(HR. Bukhari).</p> <p>Tidak punya uang bukan berarti penghalang untuk bersedekah. Lebih baik menjadi tangan di atas daripada tangan di bawah. Itulah mengapa sedekah tidak hanya sekeda tentang uang saja, tetapi juga senyum, membantu orang ketika susah, membersihkan ruangan ketika tidak ada yang membersihkan, dan lain sebagainya.</p> <p></p> <p><strong><em>3. Mengutamakan Sedekah Tidak Akan Mengurangi Harta</em></strong></p> <p>Rasulullah صلى الله عليه وسلم bersabda “<em>Harta tidak akan berkurang dengan sedekah. Dan seorang hamba yang pemaaf pasti akan Allah tambahkan kewibawaan baginya.</em>” (HR. Muslim, no. 2588) </p> <p>Apakah gaji Anda belum cukup untuk penghasilan sehari-hari? Apakaah Anda masih memikirkan bagaimana biaya sekolah anak-anak Anda yang masih juga belum cukup?</p> <p>Itulah mengapa kita dianjurkan untuk bersedekah. Bukan hanya membersihkan diri dari dosa, tetapi keutamaan sedekah juga dapat mendatangkan rezeki lagi kepada kita. Jika kita yakin bahwa diri kita bersedekah karena Allah, insha Allah akan digantikan dengan sesuatu yang lebih baik lagi.</p> <p></p> <p><strong><em>4. Allah melipatgandakan Pahala Orang-orang yang Bersedekah</em></strong></p> <p>Allah Maha Melihat, al-Basir البصير Setiap apapun yang dilakukan oleh kita, pasti Allah سُبْحَانَهُ وَ تَعَالَى akan melihat kita. Sedekah sedikit apapun itu pasti Allah سُبْحَانَهُ وَ تَعَالَى melihatnya. Disitulah Allah سُبْحَانَهُ وَ تَعَالَى melipatgandakan pahala orang-orang yang bersedekah.</p> <p>Allah سُبْحَانَهُ وَ تَعَالَى berfirman yang artinya: “<em>Perumpamaan orang-orang yang mendermakan (shodaqoh) harta bendanya di jalan Allah, seperti (orang yang menanam) sebutir biji yang menumbuhkan tujuh untai dan tiap-tiap untai terdapat seratus biji dan Allah melipat gandakan (balasan) kepada orang yang dikehendaki, dan Allah Maha Luas (anugrah-Nya) lagi Maha Mengetahui“</em>. (QS. Al-Baqoroh: 261)</p> <p></p> <p><strong><em>5. Keutamaan Sedekah Mendapat Naungan di Hari Akhir</em></strong></p> <p>Rasulullah telah jelas mengungkapkan tentang orang-orang yang akan mendapatkan naungan di hari kiamat nanti, salah satunya adalah orang-orang yang bersedekah.</p> <p>Nabi Muhammad صلى الله عليه وسلم bersabda: “<em>Seorang yang bersedekah dengan tangan kanannya, maka ia menyembunyikan amalnya itu sampai tangan kirinya tidak mengetahui apa yang disedekahkan oleh tangan kanannya</em>“. (HR. Bukhari)</p> <p>Itulah beberapa keutamaan sedekah dalam Islam yang bermanfaat bagi kita. Jangan takut untuk hilang harta, jangan takut juga untuk mengulurkan tangan kanan kita. Anda juga bisa mendapatkan akses bersedekah dengan <strong>Yayasan Berkah Yatim Indonesia</strong> untuk memulainya.</p> <br /> </div> </div>`
@@ -42,8 +56,8 @@ export function articleLoader({ params }) {
     });
 }
 
-export function Article() {
-    const { content } = useLoaderData()
+export default function Article({ data }) {
+    const { content } = data
     return (<div>
         <Header />
         <Masthead />
