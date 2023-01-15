@@ -4,6 +4,8 @@ import axios from "axios"
 import Footer from '../../src/component/Footer'
 import Header from '../../src/component/Header'
 import Masthead from '../../src/component/Masthead'
+import { useRouter } from 'next/router';
+import origin from '../../src/constants';
 
 export default function sipp() {
     return (<div>Hello</div>)
@@ -63,9 +65,13 @@ function Helmet() {
     const title = "Kajian BYI"
     const desc = "Kajian Berkah Yatim Indonesia"
     const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    const { asPath } = useRouter();
+    const URL = `${origin()}${asPath}`;
     return (<Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={URL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
         <meta property="og:image" content={img} />

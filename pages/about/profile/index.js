@@ -1,15 +1,17 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React, { Component } from "react";
 import Footer from '../../../src/component/Footer'
 import Header from '../../../src/component/Header'
 import Masthead from '../../../src/component/Masthead'
+import origin from "../../../src/constants";
 
 export const profile = "/about/profile"
 class Profile extends Component {
 
     render() {
         return (<div>
-            <Helmet/>
+            <Helmet />
             <Header />
             <Masthead buttonLabel="Lihat Profil" target="#profil" />
             <div className="bg-light">
@@ -26,7 +28,7 @@ class Profile extends Component {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>)
     }
 }
@@ -36,9 +38,13 @@ function Helmet() {
     const title = "Profil BYI"
     const desc = "Profil Berkah Yatim Indonesia"
     const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    const { asPath } = useRouter();
+    const URL = `${origin()}${asPath}`;
     return (<Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={URL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
         <meta property="og:image" content={img} />

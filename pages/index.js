@@ -3,6 +3,8 @@ import Footer from '../src/component/Footer'
 import Header from '../src/component/Header'
 import Masthead from '../src/component/Masthead'
 import Head from 'next/head'
+import { useRouter } from "next/router"
+import origin from "../src/constants"
 
 class Home extends Component {
     render() {
@@ -21,12 +23,7 @@ class Home extends Component {
 
         return (
             <div>
-                <Head>
-                    <title>Berkah Sahabat Yatim</title>
-                    <meta property="og:title" content="Berkah Sahabat Yatim" />
-                    <meta property="og:description" content="Membangun Generasi Qurani, Berkarakter Dan Visioner Yang Berpegang Teguh Pada Al Qur'an & Sunnah" />
-                    <meta property="og:image" content="https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg" />
-                </Head>
+                <Helmet />
                 <Header />
                 <Masthead buttonLabel="Lihat Lebih Lanjut" target="#about" />
                 <section className="page-section bg-primary" id="about">
@@ -156,6 +153,23 @@ class Home extends Component {
             </div>
         )
     }
+}
+
+function Helmet() {
+    const title = "Berkah Sahabat Yatim"
+    const desc = "Membangun Generasi Qurani, Berkarakter Dan Visioner Yang Berpegang Teguh Pada Al Qur'an & Sunnah"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    const { asPath } = useRouter();
+    const URL = `${origin()}${asPath}`;
+    return (<Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={URL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+    </Head>)
 }
 
 export default Home

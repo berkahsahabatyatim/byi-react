@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import { Link } from "next/link"
 import { gsap } from "gsap";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import origin from "../src/constants";
 
 function Notfound() {
     useEffect(() => {
@@ -110,6 +112,7 @@ function Notfound() {
         fontSize: "1em",
         height: "100%"
     }}>
+        <Helmet />
         <div className="hamburger-menu">
             <button className="burger" data-state="closed">
                 <span></span>
@@ -393,7 +396,7 @@ function Notfound() {
                         </svg>
                     </div>
                     <div className="col-md-6 align-self-center">
-                    <h1 style={{
+                        <h1 style={{
                             fontSize: "7.5em",
                             margin: "15px 0px",
                             fontWeight: "bold"
@@ -407,6 +410,23 @@ function Notfound() {
             </div>
         </main>
     </div >)
+}
+
+function Helmet() {
+    const title = "Berkah Sahabat Yatim"
+    const desc = "Membangun Generasi Qurani, Berkarakter Dan Visioner Yang Berpegang Teguh Pada Al Qur'an & Sunnah"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    const { asPath } = useRouter();
+    const URL = `${origin()}${asPath}`;
+    return (<Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={URL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+    </Head>)
 }
 
 export default Notfound

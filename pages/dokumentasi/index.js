@@ -5,6 +5,8 @@ import Masthead from '../../src/component/Masthead'
 import axios from "axios"
 import Image from "next/image"
 import Head from "next/head"
+import { useRouter } from "next/router"
+import origin from "../../src/constants"
 
 export async function getStaticProps() {
     try {
@@ -43,12 +45,18 @@ export default function Dokum({ data }) {
 }
 
 function DokumHelmet() {
+    const title = "Dokumentasi"
+    const desc = "Dokumentasi BYI"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    const { asPath } = useRouter();
+    const URL = `${origin()}${asPath}`;
     return (<Head>
-        <title>Dokumentasi BYI</title>
+        <title>{title}</title>
         <meta charSet="utf-8" />
-        <meta property="og:title" content="Dokumentasi" />
-        <meta property="og:description" content="Dokumentasi Yayasan BYI" />
-        <meta property="og:image"
-            content="https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={URL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
     </Head>)
 }
