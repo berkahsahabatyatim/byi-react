@@ -4,7 +4,6 @@ import Masthead from "./component/Masthead"
 import axios from "axios"
 import { useLoaderData } from "react-router-dom"
 import Footer from "./component/Footer"
-import SEO from "./component/SEO";
 
 export async function dokumLoader() {
     try {
@@ -27,11 +26,6 @@ export function Dokum() {
     var { data } = useLoaderData()
     console.log(data);
     return (<div>
-        <SEO
-            title='Learning React Helmet!'
-            description='Beginner friendly page for learning React Helmet.'
-            name='Company name.'
-            type='article' />
         <Header />
         <Masthead buttonLabel="Lihat Album" target="#album" />
         <div class="container page-top mt-5">
