@@ -7,6 +7,7 @@ export const visiMisi = "/about/visi-misi"
 
 export default function Vision() {
     return (<div>
+        <Helmet/>
         <Header/>
         <Masthead buttonLabel="Lihat Visi&Misi" target="#profil" />
         <div className="bg-light">
@@ -29,4 +30,18 @@ export default function Vision() {
         </div>
         <Footer/>
     </div>)
+}
+
+
+function Helmet() {
+    const title = "Visi Misi BYI"
+    const desc = "Visi Misi Berkah Yatim Indonesia"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    return (<Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+    </Head>)
 }

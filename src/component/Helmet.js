@@ -5,7 +5,7 @@ export default function Helments(props) {
 
     var { title, desc, img } = props;
     title = title !== undefined ? title : "Berkah Yatim Indonesia"
-    desc = desc !== undefined ? desc : "Membangun Generasi Visioner"
+    desc = desc !== undefined ? desc : "Membangun Generasi Visioners"
     img = img !== undefined ? img : "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
     return <Head>
         <title>{title}</title>

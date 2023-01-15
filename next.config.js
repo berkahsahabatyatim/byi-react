@@ -9,5 +9,6 @@ module.exports = {
                 pathname: '/nashihu/**',
             },
         ],
-    },
+        unoptimized: true
+    }
 }

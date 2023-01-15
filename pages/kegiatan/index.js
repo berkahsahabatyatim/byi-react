@@ -7,6 +7,7 @@ export const kegiatan = '/kegiatan';
 
 export default function Activity() {
     return (<>
+        <Helmet />
         <Header />
         <Masthead />
         <section class="page-section bg-light" id="activity">
@@ -40,4 +41,18 @@ export default function Activity() {
         </section>
         <Footer />
     </>)
+}
+
+
+function Helmet() {
+    const title = "Kegiatan BYI"
+    const desc = "Kegiatan Berkah Yatim Indonesia"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    return (<Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+    </Head>)
 }

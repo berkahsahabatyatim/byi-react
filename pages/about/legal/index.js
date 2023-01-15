@@ -1,8 +1,8 @@
 import React from "react"
 import Footer from '../../../src/component/Footer'
 import Header from '../../../src/component/Header'
-import Helmets from "../../../src/component/Helmet"
 import Masthead from '../../../src/component/Masthead'
+import Head from "next/head"
 
 export const legalitas = "/legalitas"
 
@@ -13,7 +13,7 @@ export default function Legalitas() {
     const upz = "/assets/img/profil/UPZ1.jpg"
     const upz2 = "/assets/img/profil/UPZ2.jpg"
     return (<div>
-        <Helmets />
+        <Helmet />
         <Header />
         <Masthead buttonLabel="Lihat Legalitas" target="#legal" />
         <div className="bg-light" id="legal">
@@ -99,4 +99,17 @@ export default function Legalitas() {
         </div>
         <Footer />
     </div>)
+}
+
+function Helmet() {
+    const title = "Legalitas BYI"
+    const desc = "Legalitas Berkah Yatim Indonesia"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    return (<Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+    </Head>)
 }

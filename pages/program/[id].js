@@ -21,7 +21,6 @@ export async function getStaticPaths() {
     const paths = posts.map((post) => ({
         params: { id: post.id },
     }))
-    console.log(paths)
     return { paths, fallback: false }
 }
 
@@ -86,6 +85,7 @@ function loader(params) {
 export default function Program({ data }) {
     const { content, title, bg } = data
     return (<div>
+        <Helmet/>
         <Head>
             <title>{title}</title>
             <meta property="og:title" content={title} />
@@ -110,4 +110,17 @@ export default function Program({ data }) {
         </section>
         <Footer />
     </div>)
+}
+
+function Helmet() {
+    const title = "Program BYI"
+    const desc = "Program Berkah Yatim Indonesia"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    return (<Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+    </Head>)
 }

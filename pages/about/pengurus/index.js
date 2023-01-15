@@ -7,7 +7,8 @@ export const pengurus = "/about/pengurus"
 
 export default function Pengurus() {
     return (<div>
-        <Header/>
+        <Helmet/>
+        <Header />
         <Masthead buttonLabel="Lihat Pengurus" target="#legal" />
         <div className="bg-light" id="legal">
             <div id="profil" className="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-justify text-dark" >
@@ -78,6 +79,20 @@ export default function Pengurus() {
                 </div>
             </div>
         </div>
-        <Footer/>
+        <Footer />
     </div>)
+}
+
+
+function Helmet() {
+    const title = "Pengurus BYI"
+    const desc = "Pengurus Berkah Yatim Indonesia"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    return (<Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+    </Head>)
 }

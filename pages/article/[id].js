@@ -1,3 +1,4 @@
+import Head from "next/head"
 import React from "react"
 import { useLoaderData } from "react-router-dom"
 import Footer from '../../src/component/Footer'
@@ -6,16 +7,14 @@ import Masthead from '../../src/component/Masthead'
 
 
 export async function getStaticPaths() {
-    const posts = [1, 2, 3, 4, 5, 6].map((e) => ({ id: `${e}` }))
+    const posts = [1, 2, 3, 4, 5].map((e) => ({ id: `${e}` }))
     const paths = posts.map((post) => ({
         params: { id: post.id },
     }))
-    console.log(paths)
     return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-    console.log('cuyye',params)
     const _data = JSON.stringify(articleLoader(params))
     const data = JSON.parse(_data)
     return { props: { data } }
@@ -26,7 +25,6 @@ export const article = (param) => {
 }
 
 export function articleLoader({ id }) {
-    console.log('cuyy',id)
     switch (id) {
         case "1":
             return {
@@ -59,6 +57,7 @@ export function articleLoader({ id }) {
 export default function Article({ data }) {
     const { content } = data
     return (<div>
+        <Helmet />
         <Header />
         <Masthead />
         <div id="main-content">
@@ -66,4 +65,18 @@ export default function Article({ data }) {
         </div>
         <Footer />
     </div>)
+}
+
+
+function Helmet() {
+    const title = "Artikel BYI"
+    const desc = "Artikel Berkah Yatim Indonesia"
+    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    return (<Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:image" content={img} />
+    </Head>)
 }
