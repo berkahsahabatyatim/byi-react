@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useLoaderData } from 'react-router-dom';
 import axios from "axios"
 import Footer from '../../src/component/Footer'
 import Header from '../../src/component/Header'
