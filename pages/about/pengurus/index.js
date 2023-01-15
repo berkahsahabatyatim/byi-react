@@ -25,11 +25,11 @@ export default function Pengurus() {
                     }}>
                         <tr>
                             <td>Pembina</td>
-                            <td>SITI MARIYAM</td>
+                            <td>MUHAMMAD ABIYYU MUFTI HANIF</td>
                         </tr>
                         <tr>
                             <td>Ketua Pengurus</td>
-                            <td>RK DADAN SN, SP.</td>
+                            <td>SITI MARIYAM</td>
                         </tr>
                         <tr>
                             <td>Sekretaris</td>
@@ -41,7 +41,7 @@ export default function Pengurus() {
                         </tr>
                         <tr>
                             <td>Anggota</td>
-                            <td>AHMAD NASHIHUDDIEN</td>
+                            <td>AHMAD NASHIHUDDIEN<br/>YASMIN NABILAH</td>
                         </tr>
                     </table>
 
@@ -55,7 +55,7 @@ export default function Pengurus() {
                         width: "100%"
                     }}>
                         <tr>
-                            <td>Pembina Yayasan</td>
+                            <td>Pembina</td>
                             <td>DONY HERDYANA, SSTP, MAP</td>
                         </tr>
                         <tr>
