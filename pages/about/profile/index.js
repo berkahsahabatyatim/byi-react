@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { Component } from "react";
 import Footer from '../../../src/component/Footer'
 import Header from '../../../src/component/Header'
