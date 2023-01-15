@@ -23,8 +23,8 @@ class Home extends Component {
             <div>
                 <Head>
                     <title>Berkah Sahabat Yatim</title>
-                    <meta property="og:title" content="Berkah Sahabat Yatims" />
-                    <meta property="og:description" content="mantulity" />
+                    <meta property="og:title" content="Berkah Sahabat Yatim" />
+                    <meta property="og:description" content="Membangun Generasi Qurani, Berkarakter Dan Visioner Yang Berpegang Teguh Pada Al Qur'an & Sunnah" />
                     <meta property="og:image" content="https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg" />
                 </Head>
                 <Header />
