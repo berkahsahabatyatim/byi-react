@@ -1,6 +1,5 @@
 import React from "react"
 import Footer from '../../../src/component/Footer'
-import Header from '../../../src/component/Header'
 import Masthead from '../../../src/component/Masthead'
 import Head from "next/head"
 import { useRouter } from "next/router"
@@ -16,7 +15,6 @@ export default function Legalitas() {
     const upz2 = "/assets/img/profil/UPZ2.jpg"
     return (<div>
         <Helmet />
-        <Header />
         <Masthead buttonLabel="Lihat Legalitas" target="#legal" />
         <div className="bg-light" id="legal">
             <div id="profil" className="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-justify text-dark" >

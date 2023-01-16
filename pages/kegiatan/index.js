@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import Footer from '../../src/component/Footer'
-import Header from '../../src/component/Header'
 import Masthead from '../../src/component/Masthead'
 import origin from '../../src/constants';
 
@@ -11,7 +10,6 @@ export const kegiatan = '/kegiatan';
 export default function Activity() {
     return (<>
         <Helmet />
-        <Header />
         <Masthead />
         <section class="page-section bg-light" id="activity">
             <div class="container">

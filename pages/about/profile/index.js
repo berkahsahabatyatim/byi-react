@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { Component } from "react";
 import Footer from '../../../src/component/Footer'
-import Header from '../../../src/component/Header'
 import Masthead from '../../../src/component/Masthead'
 import origin from "../../../src/constants";
 
@@ -12,7 +11,6 @@ class Profile extends Component {
     render() {
         return (<div>
             <Helmet />
-            <Header />
             <Masthead buttonLabel="Lihat Profil" target="#profil" />
             <div className="bg-light">
                 <div id="profil" className="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-justify text-dark" >

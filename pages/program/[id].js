@@ -2,7 +2,6 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import React from "react"
 import Footer from '../../src/component/Footer'
-import Header from '../../src/component/Header'
 import Masthead from '../../src/component/Masthead'
 import origin from "../../src/constants"
 
@@ -87,14 +86,13 @@ function loader(params) {
 export default function Program({ data }) {
     const { content, title, bg } = data
     return (<div>
-        <Helmet/>
+        <Helmet />
         <Head>
             <title>{title}</title>
             <meta property="og:title" content={title} />
             <meta property="og:description" content={content} />
             <meta property="og:image" content={bg} />
         </Head>
-        <Header />
         <Masthead bg={bg} title={title} desc="" />
         <section className="page-section" id="services">
             <div className="container">

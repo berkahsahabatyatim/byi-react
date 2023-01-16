@@ -2,7 +2,6 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import React from "react"
 import Footer from "../../src/component/Footer"
-import Header from "../../src/component/Header"
 import Masthead from "../../src/component/Masthead"
 import origin from "../../src/constants"
 
@@ -10,7 +9,6 @@ export const donasi = "/donasi"
 export default function Donasi() {
     return (<div>
         <Helmet />
-        <Header />
         <Masthead bg="donasi" buttonLabel="Lihat Profil" target="#donate" />
         <section class="page-section bg-light" id="donate">
             <div class="container">

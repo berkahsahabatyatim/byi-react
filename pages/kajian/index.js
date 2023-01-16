@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import axios from "axios"
 import Footer from '../../src/component/Footer'
-import Header from '../../src/component/Header'
 import Masthead from '../../src/component/Masthead'
 import { useRouter } from 'next/router';
 import origin from '../../src/constants';
@@ -46,7 +45,6 @@ export function Kajian() {
     })
     return (<div>
         <Helmet />
-        <Header />
         <Masthead />
         <div id="main-content" className=" mt-3 mx-3">
             <div className={`${type}`}>

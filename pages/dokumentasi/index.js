@@ -1,6 +1,5 @@
 import React from "react"
 import Footer from '../../src/component/Footer'
-import Header from '../../src/component/Header'
 import Masthead from '../../src/component/Masthead'
 import axios from "axios"
 import Image from "next/image"
@@ -28,7 +27,6 @@ export const dokum = "/dokumentasi"
 export default function Dokum({ data }) {
     return (<div>
         <DokumHelmet />
-        <Header />
         <Masthead buttonLabel="Lihat Album" target="#album" />
         <div className="container page-top mt-5">
             <div className="row" id="album">

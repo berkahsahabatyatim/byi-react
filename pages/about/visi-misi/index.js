@@ -2,7 +2,6 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import React from "react"
 import Footer from '../../../src/component/Footer'
-import Header from '../../../src/component/Header'
 import Masthead from '../../../src/component/Masthead'
 import origin from "../../../src/constants"
 
@@ -11,7 +10,6 @@ export const visiMisi = "/about/visi-misi"
 export default function Vision() {
     return (<div>
         <Helmet />
-        <Header />
         <Masthead buttonLabel="Lihat Visi&Misi" target="#profil" />
         <div className="bg-light">
             <div id="profil" className="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-center text-dark" >

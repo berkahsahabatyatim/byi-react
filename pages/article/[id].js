@@ -2,7 +2,6 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import React from "react"
 import Footer from '../../src/component/Footer'
-import Header from '../../src/component/Header'
 import Masthead from '../../src/component/Masthead'
 import origin from "../../src/constants"
 
@@ -59,7 +58,6 @@ export default function Article({ data }) {
     const { content } = data
     return (<div>
         <Helmet />
-        <Header />
         <Masthead />
         <div id="main-content">
             <div dangerouslySetInnerHTML={{ __html: content }}></div>

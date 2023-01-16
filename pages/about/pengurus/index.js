@@ -2,7 +2,6 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import React from "react"
 import Footer from '../../../src/component/Footer'
-import Header from '../../../src/component/Header'
 import Masthead from '../../../src/component/Masthead'
 import origin from "../../../src/constants"
 
@@ -10,8 +9,7 @@ export const pengurus = "/about/pengurus"
 
 export default function Pengurus() {
     return (<div>
-        <Helmet/>
-        <Header />
+        <Helmet />
         <Masthead buttonLabel="Lihat Pengurus" target="#legal" />
         <div className="bg-light" id="legal">
             <div id="profil" className="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-justify text-dark" >
@@ -44,7 +42,7 @@ export default function Pengurus() {
                         </tr>
                         <tr>
                             <td>Anggota</td>
-                            <td>AHMAD NASHIHUDDIEN<br/>YASMIN NABILAH</td>
+                            <td>AHMAD NASHIHUDDIEN<br />YASMIN NABILAH</td>
                         </tr>
                     </table>
 

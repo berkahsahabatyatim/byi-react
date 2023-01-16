@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import Footer from '../src/component/Footer'
-import Header from '../src/component/Header'
 import Masthead from '../src/component/Masthead'
 import Head from 'next/head'
 import { useRouter } from "next/router"
@@ -24,7 +23,6 @@ class Home extends Component {
         return (
             <div>
                 <Helmet />
-                <Header />
                 <Masthead buttonLabel="Lihat Lebih Lanjut" target="#about" />
                 <section className="page-section bg-primary" id="about">
                     <div className="container">
