@@ -39,7 +39,7 @@ function Header() {
                             </div>
                         </div>
                     </li>
-                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={dokum}>Dokumentasi</Link></li>
+                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={`${dokum}#album`}>Dokumentasi</Link></li>
                     <li className="dropdown mr-3">
                         <div className="nav-item">
                             <div className="nav-link js-scroll-trigger" href={root}>Program Kerja</div>
@@ -59,7 +59,7 @@ function Header() {
                         </div>
                     </li>
                     <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={donasi + "#donate"}>Donasi</Link></li>
-                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href={kegiatan}>Kegiatan</a></li>
+                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href={`${kegiatan}#activity`}>Kegiatan</a></li>
                     <li className="dropdown">
                         <div className="nav-item">
                             <a className="nav-link js-scroll-trigger" href={root}>Artikel</a>

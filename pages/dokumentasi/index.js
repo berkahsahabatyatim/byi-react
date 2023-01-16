@@ -31,7 +31,7 @@ export default function Dokum({ data }) {
         <div className="container page-top mt-5">
             <div className="row" id="album">
                 {data.map((a) => (
-                    <div className="col-lg-3 col-md-4 col-xs-6 thumb mb-4">
+                    <div className="col-lg-3 col-md-4 col-xs-6 thumb mb-4" key={a.download_url}>
                         <a data-fancybox="gallery" href={a.download_url} rel="ligthbox" >
                             <Image src={a.download_url} className="img-fluid zoom loadingImg" alt="" loading="lazy" height="300" width="300" />
                         </a></div>))}

@@ -17,7 +17,9 @@ export default function Donasi() {
                         <div class="text-dark mt-4 mb-4">
                             Rancangan dan Perencanaan Yayasan Berkah Yatim Indonesia
                         </div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KRswZr858kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="container-iframe" >
+                            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KRswZr858kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                         <div class="text-dark mb-3">
                             Salurkan bantuan Anda dalam mendukung program-program yayasan melalui portal donasi berikut
                         </div>
