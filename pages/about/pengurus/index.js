@@ -24,26 +24,36 @@ export default function Pengurus() {
                     <table className="mb-4" style={{
                         width: "100%"
                     }}>
-                        <tr>
-                            <td>Pembina</td>
-                            <td>MUHAMMAD ABIYYU MUFTI HANIF</td>
-                        </tr>
-                        <tr>
-                            <td>Ketua Pengurus</td>
-                            <td>SITI MARIYAM</td>
-                        </tr>
-                        <tr>
-                            <td>Sekretaris</td>
-                            <td>MEYLAN PUTRI AYUNINGSIH</td>
-                        </tr>
-                        <tr>
-                            <td>Bendahara</td>
-                            <td>MUHAMMAD SANDI MAULIDIN</td>
-                        </tr>
-                        <tr>
-                            <td>Anggota</td>
-                            <td>AHMAD NASHIHUDDIEN<br />YASMIN NABILAH</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Pembina</td>
+                                <td>MUHAMMAD ABIYYU MUFTI HANIF</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Ketua Pengurus</td>
+                                <td>SITI MARIYAM</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Sekretaris</td>
+                                <td>MEYLAN PUTRI AYUNINGSIH</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Bendahara</td>
+                                <td>MUHAMMAD SANDI MAULIDIN</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Anggota</td>
+                                <td>AHMAD NASHIHUDDIEN<br />YASMIN NABILAH</td>
+                            </tr>
+                        </tbody>
                     </table>
 
                     <div className="text-center font-weight-bold">
@@ -55,26 +65,36 @@ export default function Pengurus() {
                     <table style={{
                         width: "100%"
                     }}>
-                        <tr>
-                            <td>Pembina</td>
-                            <td>DONY HERDYANA, SSTP, MAP</td>
-                        </tr>
-                        <tr>
-                            <td>Ketua</td>
-                            <td>SITI MARIYAM</td>
-                        </tr>
-                        <tr>
-                            <td>Sekretaris</td>
-                            <td>MEYLAN PUTRI AYUNINGSIH</td>
-                        </tr>
-                        <tr>
-                            <td>Bendahara</td>
-                            <td>MUHAMMAD SANDI MAULIDIN</td>
-                        </tr>
-                        <tr>
-                            <td>Manager Marketing</td>
-                            <td>AHMAD NASHIHUDDIEN</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Pembina</td>
+                                <td>DONY HERDYANA, SSTP, MAP</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Ketua</td>
+                                <td>SITI MARIYAM</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Sekretaris</td>
+                                <td>MEYLAN PUTRI AYUNINGSIH</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Bendahara</td>
+                                <td>MUHAMMAD SANDI MAULIDIN</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Manager Marketing</td>
+                                <td>AHMAD NASHIHUDDIEN</td>
+                            </tr>
+                        </tbody>
                     </table>
                     <br />
                 </div>

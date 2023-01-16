@@ -30,26 +30,36 @@ export default function Legalitas() {
                     </div>
 
                     <table style={{ width: "100%" }}>
-                        <tr>
-                            <td>Nomor</td>
-                            <td>S-30051KT/WPJ.09/KP.0603/2020</td>
-                        </tr>
-                        <tr>
-                            <td>Tanggal</td>
-                            <td>22 Desember 2020</td>
-                        </tr>
-                        <tr>
-                            <td>Nama</td>
-                            <td>YAYASAN BERKAH YATIM INDONESIA</td>
-                        </tr>
-                        <tr>
-                            <td>NPWP</td>
-                            <td>94.440.340.1.406.000</td>
-                        </tr>
-                        <tr>
-                            <td>Kategori</td>
-                            <td>Badan</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Nomor</td>
+                                <td>S-30051KT/WPJ.09/KP.0603/2020</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Tanggal</td>
+                                <td>22 Desember 2020</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Nama</td>
+                                <td>YAYASAN BERKAH YATIM INDONESIA</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>NPWP</td>
+                                <td>94.440.340.1.406.000</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Kategori</td>
+                                <td>Badan</td>
+                            </tr>
+                        </tbody>
                     </table>
                     <br />
                     <div className="text-center font-weight-bold">
@@ -59,22 +69,30 @@ export default function Legalitas() {
                     </div>
 
                     <table style={{ width: "100%" }}>
-                        <tr>
-                            <td>Nomor</td>
-                            <td>AHU-0025900.AH.01.04.Tahun 2020</td>
-                        </tr>
-                        <tr>
-                            <td>Notaris</td>
-                            <td>Ali Subhan</td>
-                        </tr>
-                        <tr>
-                            <td>Nama</td>
-                            <td>YAYASAN BERKAH YATIM INDONESIA</td>
-                        </tr>
-                        <tr>
-                            <td>Pengesahan Mentri Hukum & HAM</td>
-                            <td>No. 5020122332102472 23 Desember 2020</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Nomor</td>
+                                <td>AHU-0025900.AH.01.04.Tahun 2020</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Notaris</td>
+                                <td>Ali Subhan</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Nama</td>
+                                <td>YAYASAN BERKAH YATIM INDONESIA</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Pengesahan Mentri Hukum & HAM</td>
+                                <td>No. 5020122332102472 23 Desember 2020</td>
+                            </tr>
+                        </tbody>
                     </table>
                     <br />
                     <div className="col-lg-12 text-center mb-4">
