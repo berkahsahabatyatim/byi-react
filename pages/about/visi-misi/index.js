@@ -21,7 +21,7 @@ export default function Vision() {
                     <p>Membangun lembaga yang amanah dan profesional sebagai fasilitator kaum muslimin untuk membentuk generasi qurani menjadi hamba-hamba Allah yang bermanfaat bagi banyak orang</p>
                     <p>Membangun dan membina pondok tahfidz yatim & dhuafa berbasis kemandirian ekonomi di Indonesia</p>
                     <p>Mencetak sejuta penghafal Al-Qur'an</p>
-                    <p>Memberdayakan ekonomi masyarakat</p>
+                    <p>Memberdayakan ekonomi masyarakat dhuafa</p>
                     <br />
                 </div>
             </div>
