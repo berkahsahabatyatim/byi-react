@@ -8,6 +8,8 @@ import { program } from "../../pages/program/[id]"
 import { article } from "../../pages/article/[id]"
 import { dokum } from "../../pages/dokumentasi"
 import { kegiatan } from "../../pages/kegiatan"
+import { legalitas } from "../../pages/about/legal"
+import { programInduk } from "../../pages/about/program"
 
 function Header() {
     const root = "/"
@@ -35,12 +37,13 @@ function Header() {
                                 <Link href={profile + "#profil"}> Profil Yayasan BYI </Link>
                                 <Link href={visiMisi + "#profil"}>Visi Misi</Link>
                                 <Link href={pengurus + "#legal"}>Kepengurusan</Link>
-                                <Link href={'/about/legal' + "#legal"}>Legalitas</Link>
+                                <Link href={legalitas + "#legal"}>Legalitas</Link>
                             </div>
                         </div>
                     </li>
                     <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={`${dokum}#album`}>Dokumentasi</Link></li>
-                    <li className="dropdown mr-3">
+                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={programInduk + "#program"}>Program Kerja</Link></li>
+                    <li hidden className="dropdown mr-3">
                         <div className="nav-item">
                             <div className="nav-link js-scroll-trigger" href={root}>Program Kerja</div>
                             <div className="dropdown-content bg-dark">

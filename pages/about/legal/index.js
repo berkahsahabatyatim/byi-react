@@ -5,7 +5,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import origin from "../../../src/constants"
 
-export const legalitas = "/legalitas"
+export const legalitas = "/about/legal"
 
 export default function Legalitas() {
     const pendirian = "/assets/img/profil/Lampiran PENGESAHAN PENDIRIAN-1.jpg"
