@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import { collection, getDocs, query, where } from 'firebase/firestore';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import { db } from '../../../src/service/firebase';
@@ -37,7 +38,7 @@ export default function ArticleListEditor() {
 
     const items = []
     for (let i = 0; i < li.length; i++) {
-        items.push(<li key={i}><a onClick={() => woke(li[i].url)} >{li[i].title}</a></li>)
+        items.push(<li key={i}><Link target="_blank" rel="noopener noreferrer" href={editArtikel(li[i].url)}>{li[i].title}</Link></li>)
     }
 
     return <div>

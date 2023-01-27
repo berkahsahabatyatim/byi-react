@@ -5,7 +5,6 @@ import { Button, TextField } from '@mui/material';
 import { app, auth, db } from '../../../../src/service/firebase';
 import { addDoc, collection, doc, getDocs, getFirestore, query, Timestamp, updateDoc, where } from 'firebase/firestore';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 
 export const editArtikel = (path) => {
     return '/admin/article/edit/' + path;
@@ -81,7 +80,7 @@ export default function ArticleEditor({ data }) {
 
     return <div className='mx-5'>
         <AdminSeparator />
-        <Link href='/admin'><h3>Artikel Editor</h3></Link>
+        <h3>Artikel Editor</h3>
         <br />
         <TextField
             value={_title}
