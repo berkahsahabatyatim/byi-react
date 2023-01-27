@@ -1,9 +1,13 @@
+import { Button } from '@mui/material';
 import { collection, getDocs, query, where } from 'firebase/firestore';
+import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import { db } from '../../../src/service/firebase';
+import { editArtikel } from './edit/[id]';
 
 export default function ArticleListEditor() {
     const [li, setLi] = useState([]);
+    const router = useRouter()
 
     async function getData() {
         const querySnapshot = await getDocs(collection(db, "article"))
@@ -27,8 +31,17 @@ export default function ArticleListEditor() {
         items.push(<li key={i}><a onClick={woke} >{li[i].title}</a></li>)
     }
 
+    const addArticle = () => {
+        router.push(editArtikel('new'))
+    }
+
     return <div>
-        <h2>Artikel Editor</h2>
+        <div className='d-flex justify-content-between'>
+            <h2>Artikel Editor</h2>
+            <div width={50}/>
+            <Button onClick={addArticle}>Artikel Baru</Button>
+            <div width={50}/>
+        </div>
         <br />
         <ul>
             {items}

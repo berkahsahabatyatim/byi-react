@@ -3,6 +3,7 @@ import RichTextEditor, { EditorValue } from "react-rte";
 
 interface EditorProps {
 	initialValue: string
+	parentCallback: any
 }
 
 export const Editor: React.FC<EditorProps> = (props) => {
@@ -18,7 +19,8 @@ export const Editor: React.FC<EditorProps> = (props) => {
 	return (
 		<RichTextEditor
 			onChange={(newValue) => {
-				console.log('ye', newValue.toString('html'))
+				// console.log('ye', newValue.toString('html'))
+				props.parentCallback(newValue.toString('html'))
 				setValue(newValue);
 			}}
 			value={value}

@@ -7,6 +7,10 @@ import { addDoc, collection, getDocs, getFirestore, query, Timestamp, where } fr
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+export const editArtikel = (path) => {
+    return '/admin/article/edit/'+path;
+}
+
 const ReactRTE = dynamic(() => import("../../../../src/component/RichTextEditor.tsx"), {
     ssr: false,
 });
@@ -16,8 +20,7 @@ export async function getStaticPaths() {
     const data = querySnapshot.docs
         .map((doc) => ({ ...doc.data(), id: doc.id }));
     const urls = data.map((e) => ({ url: e.url }))
-
-    const posts = [1, 2, 3, 4, 5].map((e) => ({ id: `${e}` }))
+    urls.push({url: 'new'})
     const paths = urls.map((post) => ({
         params: { id: post.url },
     }))
@@ -33,6 +36,8 @@ export async function getStaticProps({ params }) {
     if (data.length > 0) {
         const { title, content } = data[0]
         output = { title, content }
+    } else if (params.id === 'new') {
+        output = { title: '', content: '' }
     } else {
         throw new Response("", {
             status: 404,
@@ -48,7 +53,8 @@ export default function ArticleEditor({ data }) {
     const [_content, setContent] = useState('')
 
     const handleCallback = (childData) => {
-        setValue(childData)
+        console.log('onchangg '+childData)
+        setContent(childData)
     }
 
     useEffect(() => {
@@ -66,6 +72,7 @@ export default function ArticleEditor({ data }) {
             content: _content,
             title: _title,
         }
+        console.log('ini cuy', _content)
         updateData(obj)
     }
 
