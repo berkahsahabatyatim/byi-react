@@ -3,12 +3,12 @@ import dynamic from "next/dynamic";
 import AdminSeparator from '../../../../src/component/AdminSeparator';
 import { Button, TextField } from '@mui/material';
 import { app, auth, db } from '../../../../src/service/firebase';
-import { addDoc, collection, getDocs, getFirestore, query, Timestamp, where } from 'firebase/firestore';
+import { addDoc, collection, doc, getDocs, getFirestore, query, Timestamp, updateDoc, where } from 'firebase/firestore';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 export const editArtikel = (path) => {
-    return '/admin/article/edit/'+path;
+    return '/admin/article/edit/' + path;
 }
 
 const ReactRTE = dynamic(() => import("../../../../src/component/RichTextEditor.tsx"), {
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
     const data = querySnapshot.docs
         .map((doc) => ({ ...doc.data(), id: doc.id }));
     const urls = data.map((e) => ({ url: e.url }))
-    urls.push({url: 'new'})
+    urls.push({ url: 'new' })
     const paths = urls.map((post) => ({
         params: { id: post.url },
     }))
@@ -34,8 +34,8 @@ export async function getStaticProps({ params }) {
     const data = list.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 
     if (data.length > 0) {
-        const { title, content } = data[0]
-        output = { title, content }
+        const { title, content, id } = data[0]
+        output = { title, content, id }
     } else if (params.id === 'new') {
         output = { title: '', content: '' }
     } else {
@@ -53,7 +53,6 @@ export default function ArticleEditor({ data }) {
     const [_content, setContent] = useState('')
 
     const handleCallback = (childData) => {
-        console.log('onchangg '+childData)
         setContent(childData)
     }
 
@@ -66,9 +65,13 @@ export default function ArticleEditor({ data }) {
         setValue(event.target.value)
     };
 
+
+    const isUpdate = id !== undefined
+
     const update = () => {
         const obj = {
             id,
+            isUpdate,
             content: _content,
             title: _title,
         }
@@ -96,7 +99,7 @@ export default function ArticleEditor({ data }) {
     </div>
 }
 
-async function updateData({ content, title, id }) {
+async function updateData({ content, title, id, isUpdate }) {
     const url = encodeURI(title.replaceAll(' ', '-').toLowerCase())
     if (auth.currentUser == null) {
         alert('sesi anda habis, silakan login')
@@ -107,11 +110,17 @@ async function updateData({ content, title, id }) {
 
     var updatedAt = Timestamp.fromDate(new Date());
     let updatedBy = auth.currentUser.displayName;
-
+    let docRef;
     try {
-        const docRef = await addDoc(collection(db, "article"), {
+        const body = {
             title, url, updatedAt, updatedBy, content
-        });
+        }
+        if (isUpdate) {
+            docRef = doc(db, "article", id)
+            await updateDoc(docRef, body)
+        } else {
+            docRef = await addDoc(collection(db, "article"), body);
+        }
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {
         console.error("Error adding document: ", e);

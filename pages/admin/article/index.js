@@ -26,29 +26,30 @@ export default function ArticleListEditor() {
         getData();
     }, [])
 
-    const items = []
-    for (let i = 0; i < li.length; i++) {
-        items.push(<li key={i}><a onClick={woke} >{li[i].title}</a></li>)
-    }
-
     const addArticle = () => {
         router.push(editArtikel('new'))
+    }
+
+    async function woke(id) {
+        console.log('apa ini' + id)
+        router.push(editArtikel(id))
+    }
+
+    const items = []
+    for (let i = 0; i < li.length; i++) {
+        items.push(<li key={i}><a onClick={() => woke(li[i].url)} >{li[i].title}</a></li>)
     }
 
     return <div>
         <div className='d-flex justify-content-between'>
             <h2>Artikel Editor</h2>
-            <div width={50}/>
+            <div width={50} />
             <Button onClick={addArticle}>Artikel Baru</Button>
-            <div width={50}/>
+            <div width={50} />
         </div>
         <br />
         <ul>
             {items}
         </ul>
     </div>
-}
-
-async function woke() {
-
 }
