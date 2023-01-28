@@ -29,3 +29,5 @@ if (app.name && typeof window !== 'undefined') {
 
 export { analytics, db, auth, app }
 
+export const articleDb = 'article'
+export const constkajianDB = 'kajian'

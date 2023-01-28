@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import dynamic from "next/dynamic";
 import AdminSeparator from '../../../../src/component/AdminSeparator';
 import { Button, TextField } from '@mui/material';
-import { app, articleDb, auth, db } from '../../../../src/service/firebase';
+import { app, auth, db } from '../../../../src/service/firebase';
 import { addDoc, collection, doc, getDocs, getFirestore, query, Timestamp, updateDoc, where } from 'firebase/firestore';
 import { useRouter } from 'next/router';
 
-export const editArtikel = (path) => {
-    return '/admin/article/edit/' + path;
+export const editKajian = (path) => {
+    return '/admin/kajian/edit/' + path;
 }
 
 const ReactRTE = dynamic(() => import("../../../../src/component/RichTextEditor.tsx"), {
@@ -15,7 +15,7 @@ const ReactRTE = dynamic(() => import("../../../../src/component/RichTextEditor.
 });
 
 export async function getStaticPaths() {
-    const querySnapshot = await getDocs(collection(getFirestore(app), articleDb))
+    const querySnapshot = await getDocs(collection(getFirestore(app), "kajian"))
     const data = querySnapshot.docs
         .map((doc) => ({ ...doc.data(), id: doc.id }));
     const urls = data.map((e) => ({ url: e.url }))
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     let output = ''
-    const q = query(collection(getFirestore(app), articleDb), where("url", "==", params.id));
+    const q = query(collection(getFirestore(app), "kajian"), where("url", "==", params.id));
     const list = await getDocs(q)
     const data = list.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 
@@ -115,10 +115,10 @@ async function updateData({ content, title, id, isUpdate }) {
             title, url, updatedAt, updatedBy, content
         }
         if (isUpdate) {
-            docRef = doc(db, articleDb, id)
+            docRef = doc(db, "kajian", id)
             await updateDoc(docRef, body)
         } else {
-            docRef = await addDoc(collection(db, articleDb), body);
+            docRef = await addDoc(collection(db, "kajian"), body);
         }
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {

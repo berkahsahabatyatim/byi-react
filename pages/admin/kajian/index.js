@@ -1,20 +1,20 @@
 import { Button } from '@mui/material';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
-import { articleDb, db } from '../../../src/service/firebase';
+import { db } from '../../../src/service/firebase';
 import { editArtikel } from './edit/[id]';
 
-export default function ArticleListEditor() {
+export default function KajianListEditor() {
     const [li, setLi] = useState([]);
     const router = useRouter()
 
     async function getData() {
-        const querySnapshot = await getDocs(collection(db, articleDb))
+        const querySnapshot = await getDocs(collection(db, "kajian"))
         const data = querySnapshot.docs
             .map((doc) => ({ ...doc.data(), id: doc.id }));
-        setLi(data)
+        setLi(data);
     }
 
     useEffect(() => {

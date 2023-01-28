@@ -5,11 +5,11 @@ import React from "react"
 import Footer from '../../src/component/Footer'
 import Masthead from '../../src/component/Masthead'
 import origin from "../../src/constants"
-import { app, db } from "../../src/service/firebase"
+import { app, articleDb, db } from "../../src/service/firebase"
 
 
 export async function getStaticPaths() {
-    const querySnapshot = await getDocs(collection(getFirestore(app), "article"))
+    const querySnapshot = await getDocs(collection(getFirestore(app), articleDb))
     const data = querySnapshot.docs
         .map((doc) => ({ ...doc.data(), id: doc.id }));
     const urls = data.map((e) => ({ url: e.url }))
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     let output = ''
-    const q = query(collection(getFirestore(app), "article"), where("url", "==", params.id));
+    const q = query(collection(getFirestore(app), articleDb), where("url", "==", params.id));
     const list = await getDocs(q)
     const data = list.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 
