@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import { db } from '../../../src/service/firebase';
-import { editArtikel } from './edit/[id]';
+import { editKajian } from './edit/[id]';
 
 export default function KajianListEditor() {
     const [li, setLi] = useState([]);
@@ -22,17 +22,17 @@ export default function KajianListEditor() {
     }, [])
 
     const addArticle = () => {
-        router.push(editArtikel('new'))
+        router.push(editKajian('new'))
     }
 
     const items = []
     for (let i = 0; i < li.length; i++) {
-        items.push(<li key={i}><Link href={editArtikel(li[i].url)}>{li[i].title}</Link></li>)
+        items.push(<li key={i}><Link target="_blank" href={editKajian(li[i].url)}>{li[i].title}</Link></li>)
     }
 
     return <div>
         <div className='d-flex justify-content-between'>
-            <h2>Artikel Editor</h2>
+            <h2>Kajian Editor</h2>
             <div width={50} />
             <Button onClick={addArticle}>Artikel Baru</Button>
             <div width={50} />

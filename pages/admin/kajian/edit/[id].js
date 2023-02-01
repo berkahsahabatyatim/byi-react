@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import dynamic from "next/dynamic";
 import AdminSeparator from '../../../../src/component/AdminSeparator';
 import { Button, TextField } from '@mui/material';
-import { app, auth, db } from '../../../../src/service/firebase';
+import { app, auth, db, kajianDB } from '../../../../src/service/firebase';
 import { addDoc, collection, doc, getDocs, getFirestore, query, Timestamp, updateDoc, where } from 'firebase/firestore';
 import { useRouter } from 'next/router';
+
+//notes
+// jadi untuk urusan upload, caranya: buka dialog -> use select img -> update di firebase terus full reload page nya biar muncul 
 
 export const editKajian = (path) => {
     return '/admin/kajian/edit/' + path;
@@ -15,7 +18,7 @@ const ReactRTE = dynamic(() => import("../../../../src/component/RichTextEditor.
 });
 
 export async function getStaticPaths() {
-    const querySnapshot = await getDocs(collection(getFirestore(app), "kajian"))
+    const querySnapshot = await getDocs(collection(getFirestore(app), kajianDB))
     const data = querySnapshot.docs
         .map((doc) => ({ ...doc.data(), id: doc.id }));
     const urls = data.map((e) => ({ url: e.url }))
@@ -28,7 +31,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     let output = ''
-    const q = query(collection(getFirestore(app), "kajian"), where("url", "==", params.id));
+    const q = query(collection(getFirestore(app), kajianDB), where("url", "==", params.id));
     const list = await getDocs(q)
     const data = list.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 
@@ -46,7 +49,7 @@ export async function getStaticProps({ params }) {
     return { props: { data: output } }
 }
 
-export default function ArticleEditor({ data }) {
+export default function KajianEditor({ data }) {
     const { content, title, id } = data
     const [_title, setValue] = useState('')
     const [_content, setContent] = useState('')
@@ -89,7 +92,10 @@ export default function ArticleEditor({ data }) {
             variant="outlined"
             fullWidth />
         <div className='mt-3' />
-        <ReactRTE initialValue={_content} parentCallback={handleCallback} />
+        <ReactRTE
+            initialValue={_content}
+            parentCallback={handleCallback}
+        />
         <div className='row mt-3'>
             <Button onClick={update} className='mr-3' variant="contained">Simpan</Button>
             <Button variant="outlined">Preview</Button>
@@ -115,10 +121,10 @@ async function updateData({ content, title, id, isUpdate }) {
             title, url, updatedAt, updatedBy, content
         }
         if (isUpdate) {
-            docRef = doc(db, "kajian", id)
+            docRef = doc(db, kajianDB, id)
             await updateDoc(docRef, body)
         } else {
-            docRef = await addDoc(collection(db, "kajian"), body);
+            docRef = await addDoc(collection(db, kajianDB), body);
         }
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {

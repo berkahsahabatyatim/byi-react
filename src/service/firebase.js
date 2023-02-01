@@ -3,11 +3,8 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_KEY,
     authDomain: "cms-byi.firebaseapp.com",
@@ -18,16 +15,16 @@ const firebaseConfig = {
     measurementId: "G-J74RBP3VJF"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-let analytics; let db; let auth;
+let analytics; let db; let auth; let storage;
 if (app.name && typeof window !== 'undefined') {
     analytics = getAnalytics(app)
     db = getFirestore(app)
     auth = getAuth(app)
+    storage = getStorage(app)
 }
 
-export { analytics, db, auth, app }
+export { analytics, db, auth, app, storage }
 
 export const articleDb = 'article'
-export const constkajianDB = 'kajian'
+export const kajianDB = 'kajian'
