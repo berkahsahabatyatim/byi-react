@@ -1,6 +1,7 @@
 import ErrorBoundary from '../src/component/ErrorBoundary'
-import './lagacy/css/styless.css'
-import './notfound/Notfound.css'
+import '../src/styles/lagacy.css'
+import '../src/styles/not-found.css'
+import '../src/styles/sizes.css'
 import Script from 'next/script'
 
 export default function MyApp({ Component, pageProps }) {

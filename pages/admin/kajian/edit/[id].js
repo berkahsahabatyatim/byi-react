@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from "next/dynamic";
 import AdminSeparator from '../../../../src/component/AdminSeparator';
-import { Button, TextField } from '@mui/material';
+import AddImgDialog from '../../../../src/dialog/AddImgDialog';
+import { Button, Dialog, TextField } from '@mui/material';
+import { AddAPhotoRounded } from '@mui/icons-material';
 import { app, auth, db, kajianDB } from '../../../../src/service/firebase';
 import { addDoc, collection, doc, getDocs, getFirestore, query, Timestamp, updateDoc, where } from 'firebase/firestore';
 import { useRouter } from 'next/router';
-
-//notes
-// jadi untuk urusan upload, caranya: buka dialog -> use select img -> update di firebase terus full reload page nya biar muncul 
 
 export const editKajian = (path) => {
     return '/admin/kajian/edit/' + path;
@@ -53,9 +52,12 @@ export default function KajianEditor({ data }) {
     const { content, title, id } = data
     const [_title, setValue] = useState('')
     const [_content, setContent] = useState('')
+    const [diOpen, setDiOpen] = useState(false);
+    const [soha, setSoha] = useState(true)
 
     const handleCallback = (childData) => {
         setContent(childData)
+        console.log(childData)
     }
 
     useEffect(() => {
@@ -81,10 +83,43 @@ export default function KajianEditor({ data }) {
         updateData(obj)
     }
 
+    const addPhoto = () => {
+        setDiOpen(true)
+    }
+
+    const onImgSelected = (img) => {
+        console.log('ini img', img)
+        setDiOpen(false)
+        setContent(`${_content}<p><img src="${img}" width="100" height="100"/></p>`)
+        setSoha(false)
+        setTimeout(() => {
+            setSoha(true)
+        }, 50)
+    }//npx react-codemod rename-unsafe-lifecycles
+
     return <div className='mx-5'>
         <AdminSeparator />
-        <h3>Artikel Editor</h3>
+        <div className='d-flex justify-content-between'>
+            <h3>Kajian Editor</h3>
+            <div width={50} />
+            <div
+                className="elPointer"
+                onClick={addPhoto}>
+                <AddAPhotoRounded
+                    color="primary">
+                    add_circle
+                </AddAPhotoRounded>
+            </div>
+            <div width={50} />
+        </div>
         <br />
+        {diOpen ? <Dialog
+            open={diOpen}>
+            <AddImgDialog
+                onClose={() => setDiOpen(false)}
+                onImgSelected={onImgSelected}
+            />
+        </Dialog> : <div />}
         <TextField
             value={_title}
             onChange={handleChange}
@@ -92,10 +127,10 @@ export default function KajianEditor({ data }) {
             variant="outlined"
             fullWidth />
         <div className='mt-3' />
-        <ReactRTE
+        {soha ? <ReactRTE
             initialValue={_content}
             parentCallback={handleCallback}
-        />
+        /> : <p></p>}
         <div className='row mt-3'>
             <Button onClick={update} className='mr-3' variant="contained">Simpan</Button>
             <Button variant="outlined">Preview</Button>
