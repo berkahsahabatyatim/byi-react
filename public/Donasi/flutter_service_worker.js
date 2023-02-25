@@ -4,17 +4,20 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "e1c98f8f903e8d79f461d2c5a40bf89e",
-"index.html": "6f9b717abc58ee2f012fa78fa986f024",
-"/": "6f9b717abc58ee2f012fa78fa986f024",
-"main.dart.js": "752adff6ec659bb854b82989b0460d73",
+"favicon.ico": "556f31acd686989b1afcf382c05846aa",
+"index.html": "0798a7d95a9a08ece4587f0054b3f373",
+"/": "0798a7d95a9a08ece4587f0054b3f373",
+"main.dart.js": "f65b160f4304d968a0ba6ff7c3873c70",
+"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
 "favicon.png": "22f347997df00585ac2c835a0fa3afa4",
 "icons/Icon-192.png": "22f347997df00585ac2c835a0fa3afa4",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "5f4a82460294a8bb0afa2b576e264282",
-"assets/AssetManifest.json": "3f8b209d68f35bc6b442d52c7b1138a2",
-"assets/NOTICES": "944185e46064ef372b3f32ce09eb17ac",
+"assets/AssetManifest.json": "3544de5e0dbcd651164735d70a28b4a1",
+"assets/NOTICES": "acdfaca9a933f5730248e5ff89a8bbf8",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
+"assets/shaders/ink_sparkle.frag": "8777563265326ddbb6f438d2c421454d",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/assets/img/favicon.ico": "556f31acd686989b1afcf382c05846aa",
 "assets/assets/img/logobyi-white.jpeg": "22f347997df00585ac2c835a0fa3afa4",
 "assets/assets/img/bank/BNI.webp": "2c048b0f25a76e2dfad413cf9ff1a325",
@@ -24,7 +27,11 @@ const RESOURCES = {
 "assets/assets/img/bank/ovo.png": "0d80cdeb60fe20fc233a7d1aa52763b8",
 "assets/assets/img/bank/BNI-logo.png": "b8397be1bff2dd041e49f2ccac3795d9",
 "assets/assets/img/bank/Mandiri.webp": "8cee425a56f29501bc7a0e61800db42d",
-"assets/assets/img/program/lahan.jpeg": "a77c8769cebd95243a6b8704535fe45f",
+"assets/assets/img/profile/socmed/github.svg": "7b9cdb1c12b433702ac24d4c92d68b46",
+"assets/assets/img/profile/socmed/fb.svg": "a2020770ba29a203a9afa6f5444665af",
+"assets/assets/img/profile/socmed/ig.png": "a4ee03f82a70fb55492c769b33429e44",
+"assets/assets/img/profile/socmed/linkedin.svg": "78bd3d7689c5ea3b6fee83da5ef05386",
+"assets/assets/img/program/lahan.jpeg": "06cc7ef322cdc50f1be4f3e48c6e0a41",
 "assets/assets/img/program/rLomba.jpeg": "ef0e871e0e2a5f00b4e20d383e5e5e3e",
 "assets/assets/img/program/qurban_beli.jpg": "49d83412bf31fcd436523d27ff6e77d8",
 "assets/assets/img/program/zakatEmas.jpeg": "09137bbd9591f0c6d60c9af4dc447658",
@@ -39,16 +46,18 @@ const RESOURCES = {
 "assets/assets/img/program/rYatimTHR.jpeg": "1592a4cb7e9f4a5740a28c7af8bf3711",
 "assets/assets/img/program/rDuat.jpeg": "2921dcbc0ff108c1b62588067d2e73ab",
 "assets/assets/img/program/zakat.jpg": "67a1527194cc776f78cf4912eda4cbc8",
-"app.js": "1e575782399dce4a147bb6543c2b77f6"
+"app.js": "1e575782399dce4a147bb6543c2b77f6",
+"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
+"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
+"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
+"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62"
 };
 
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "/",
-"main.dart.js",
+  "main.dart.js",
 "index.html",
-"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
@@ -147,9 +156,11 @@ self.addEventListener("fetch", (event) => {
     .then((cache) =>  {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
-        // lazily populate the cache.
+        // lazily populate the cache only if the resource was successfully fetched.
         return response || fetch(event.request).then((response) => {
-          cache.put(event.request, response.clone());
+          if (response && Boolean(response.ok)) {
+            cache.put(event.request, response.clone());
+          }
           return response;
         });
       })
