@@ -4,9 +4,10 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "e1c98f8f903e8d79f461d2c5a40bf89e",
-"index.html": "7372201198ff126c38b4af294d0bc278",
-"/": "7372201198ff126c38b4af294d0bc278",
-"main.dart.js": "f810aee8cfac63d3579eabe6ed82d2ff",
+"index.html": "a7cd151a39648438ed56a917e84defa7",
+"/": "a7cd151a39648438ed56a917e84defa7",
+"main.dart.js": "78fa3881ea303d7319894a8edb34f65b",
+"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
 "favicon.png": "22f347997df00585ac2c835a0fa3afa4",
 "icons/Icon-192.png": "22f347997df00585ac2c835a0fa3afa4",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
@@ -25,7 +26,7 @@ const RESOURCES = {
 "assets/assets/img/bank/ovo.png": "0d80cdeb60fe20fc233a7d1aa52763b8",
 "assets/assets/img/bank/BNI-logo.png": "b8397be1bff2dd041e49f2ccac3795d9",
 "assets/assets/img/bank/Mandiri.webp": "8cee425a56f29501bc7a0e61800db42d",
-"assets/assets/img/program/bGempa.jpeg": "99e34bca90760d5b6f89361c19ed820b",
+"assets/assets/img/program/bGempa.jpeg": "3c73fcbd4cf3afcdd319a352040de564",
 "assets/assets/img/program/lahan.jpeg": "06cc7ef322cdc50f1be4f3e48c6e0a41",
 "assets/assets/img/program/rLomba.jpeg": "ef0e871e0e2a5f00b4e20d383e5e5e3e",
 "assets/assets/img/program/qurban_beli.jpg": "49d83412bf31fcd436523d27ff6e77d8",
@@ -41,7 +42,11 @@ const RESOURCES = {
 "assets/assets/img/program/rYatimTHR.jpeg": "1592a4cb7e9f4a5740a28c7af8bf3711",
 "assets/assets/img/program/rDuat.jpeg": "e5d8e8e08491efece6843a016c706b46",
 "assets/assets/img/program/zakat.jpg": "67a1527194cc776f78cf4912eda4cbc8",
-"app.js": "1e575782399dce4a147bb6543c2b77f6"
+"app.js": "1e575782399dce4a147bb6543c2b77f6",
+"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
+"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
+"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
+"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62"
 };
 
 // The application shell files that are downloaded before a service worker can
