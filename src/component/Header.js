@@ -42,10 +42,10 @@ function Header() {
                         </div>
                     </li>
                     <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={`${dokum}#album`}>Dokumentasi</Link></li>
-                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={programInduk + "#program"}>Program Kerja</Link></li>
+                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={programInduk + "#program"}>Program Berkah</Link></li>
                     <li hidden className="dropdown mr-3">
                         <div className="nav-item">
-                            <div className="nav-link js-scroll-trigger" href={root}>Program Kerja</div>
+                            <div className="nav-link js-scroll-trigger" href={root}>Program Berkah</div>
                             <div className="dropdown-content bg-dark">
                                 <a href={program("pondok")}>Pendidikan dan Pembinaan Pondok Tahfidz Yatim & Dhuafa</a>
                                 <a href={program("pondok")}>Pembangunan dan Pembinaan Kampung Tauhid</a>
