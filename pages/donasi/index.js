@@ -7,6 +7,9 @@ import origin from "../../src/constants"
 
 export const donasi = "/donasi"
 export default function Donasi() {
+    const bsi = "/assets/img/bsi.png"
+    const mandiri = "/assets/img/mandiri.jpg"
+    const bni = "/assets/img/bni.jpg"
     return (<div>
         <Helmet />
         <Masthead bg="donasi" buttonLabel="Lihat Profil" target="#donate" />
@@ -32,15 +35,13 @@ export default function Donasi() {
                         <div class="text-dark mb-3">
                             yang telah kami sediakan :
                         </div>
-                        <div class="col-lg-12 mb-3 js-copy-bsm-btn">
-                            <div class="btn btn-primary">Rekening Mandiri Syari'ah (BSM)</div>
-                        </div>
-                        <div class="col-lg-12 mb-3 js-copy-mandiri-btn">
-                            <div class="btn btn-primary">Rekening Mandiri</div>
-                        </div>
-                        <div class="col-lg-12 mb-3 js-copy-bni-btn">
-                            <div class="btn btn-primary">Rekening BNI</div>
-                        </div>
+                        <img className="mr-1" src={bsi} height="20" alt="BSI"></img>Rekening BSI (451): <span className="js-copy-bsm-btn" >714 8434 306</span><br />
+                        <br />
+                        <img className="mr-1" src={mandiri} height="20" alt="Mandiri"></img>Mandiri (008): <span className="js-copy-mandiri-btn" >182 000 664 5022</span> <br />
+                        <br />
+                        <img className="mr-1" src={bni} height="20" alt="BNI"></img>Rekening BNI (009):     <span className="js-copy-bni-btn">118 0279 271</span> <br />
+                        <br />
+                        a.n <i>Yayasan Berkah Yatim Indonesia</i>
                         <div class="text-dark mb-2">
                             Konfirmasi donasi melalui kontak:
                         </div>
