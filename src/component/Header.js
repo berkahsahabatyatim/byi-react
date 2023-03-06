@@ -12,7 +12,7 @@ import { programInduk } from "../../pages/about/program"
 
 function Header() {
 
-    const root = ""
+    const root = "/"
     const contact = "/#contact"
 
     const article1 = article("syarat-wajib-zakat-&-cara-menunaikannya") + "#main-content"
