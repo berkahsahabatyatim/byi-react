@@ -7,11 +7,11 @@ import { pengurus } from "../../pages/about/pengurus"
 import { program } from "../../pages/program/[id]"
 import { article } from "../../pages/artikel/[id]"
 import { dokum } from "../../pages/dokumentasi"
-import { kegiatan } from "../../pages/kegiatan"
 import { legalitas } from "../../pages/about/legal"
 import { programInduk } from "../../pages/about/program"
 
 function Header() {
+
     const root = ""
     const contact = "/#contact"
 
@@ -21,7 +21,7 @@ function Header() {
     const article4 = article("siapa-yang-berhak-menerima-zakat") + "#main-content"
     const article5 = article("tips-memilih-hewan-qurban") + "#main-content"
     const logo = "/assets/img/logobyi.png"
-    return (<nav className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    return (<nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div className="container">
             <Link className="navbar-brand js-scroll-trigger" href={root}>
                 <img className="navbar-brand js-scroll-trigger" src={logo} width="50" height="53" alt="logo" />
@@ -29,10 +29,10 @@ function Header() {
             <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
                 <ul className="navbar-nav ml-auto my-2 my-lg-0">
-                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={root}>Home</Link></li>
-                    <li className="dropdown mr-3">
+                    <li className="lispecial nav-item"><Link className="nav-link js-scroll-trigger" href={root}>Home</Link></li>
+                    <li className="dropdown">
                         <div className="nav-item">
-                            <div className="nav-link js-scroll-trigger">Tentang Kami</div>
+                            <a className="lispecial nav-link js-scroll-trigger" href={root}> &nbsp;Tentang Kami &nbsp;</a>
                             <div className="dropdown-content bg-dark">
                                 <Link href={profile + "#profil"}> Profil Yayasan BYI </Link>
                                 <Link href={visiMisi + "#profil"}>Visi Misi</Link>
@@ -41,8 +41,8 @@ function Header() {
                             </div>
                         </div>
                     </li>
-                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={`${dokum}#album`}>Dokumentasi</Link></li>
-                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={programInduk + "#program"}>Program Berkah</Link></li>
+                    <li className="lispecial nav-item"><Link className="nav-link js-scroll-trigger" href={`${dokum}#album`}>Dokumentasi</Link></li>
+                    <li className="lispecial nav-item"><Link className="nav-link js-scroll-trigger" href={programInduk + "#program"}>Program Berkah</Link></li>
                     <li hidden className="dropdown mr-3">
                         <div className="nav-item">
                             <div className="nav-link js-scroll-trigger" href={root}>Program Berkah</div>
@@ -61,11 +61,11 @@ function Header() {
                             </div>
                         </div>
                     </li>
-                    <li className="nav-item"><Link className="nav-link js-scroll-trigger" href={donasi + "#donate"}>Donasi</Link></li>
-                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href={`${kegiatan}#activity`}>Kegiatan</a></li>
+                    <li className="lispecial nav-item"><Link className="nav-link js-scroll-trigger" href={donasi + "#donate"}>Donasi</Link></li>
+                    {/* <li className="nav-item"><a className="nav-link js-scroll-trigger" href={`${kegiatan}#activity`}>Kegiatan</a></li> */}
                     <li className="dropdown">
                         <div className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href={root}>Artikel</a>
+                            <a className="lispecial nav-link js-scroll-trigger" href={root}> &nbsp;Artikel&nbsp;</a>
                             <div className="dropdown-content bg-dark">
                                 <Link href={article1}>Manfaat Sedekah</Link>
                                 <Link href={article2}>Keutamaan, Rukun & Syarat Wakaf</Link>
@@ -75,7 +75,7 @@ function Header() {
                             </div>
                         </div>
                     </li>
-                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href={contact}>Hubungi Kami</a></li>
+                    <li className="lispecial nav-item"><a className="nav-link js-scroll-trigger" href={contact}>Hubungi Kami</a></li>
                 </ul>
             </div>
         </div>

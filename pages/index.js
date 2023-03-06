@@ -6,6 +6,21 @@ import { useRouter } from "next/router"
 import origin from "../src/constants"
 
 class Home extends Component {
+
+    componentDidMount() {
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            console.log('yee');
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("mainNav").style.top = "0";
+            } else {
+                document.getElementById("mainNav").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    }
+
     render() {
         const full1 = '/assets/img/portfolio/fullsize/1.jpg'
         const full2 = '/assets/img/portfolio/fullsize/2.jpg'
