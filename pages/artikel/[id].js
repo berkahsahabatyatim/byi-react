@@ -14,7 +14,6 @@ export async function getStaticPaths() {
         .map((doc) => ({ ...doc.data(), id: doc.id }));
     const urls = data.map((e) => ({ url: e.url }))
 
-    const posts = [1, 2, 3, 4, 5].map((e) => ({ id: `${e}` }))
     const paths = urls.map((post) => ({
         params: { id: post.url },
     }))

@@ -1,0 +1,24 @@
+.deleteED{
+    color: red;
+    opacity:0;
+    transition:opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -webkit-transition: opacity 0.5s linear;
+    z-index: 1;
+    position: absolute;
+}
+
+
+.titleED:hover .deleteED {
+    opacity: 1;
+    transition:opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -webkit-transition: opacity 0.5s linear;
+ }
+
+ .containerED {
+  display: flex;
+  align-items: top;
+  justify-content: flex-start;
+  float: left
+}

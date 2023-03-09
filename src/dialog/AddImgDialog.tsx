@@ -38,15 +38,25 @@ function AddImgDialog(props: DialogProps) {
                             const _file = file.files[0]
                             const storageRef = ref(storage, `kajian/${_file.name}`)
 
+                            const img = new Image();
+                            img.addEventListener('load', () => {
+                                var sip = window.prompt(
+                                    'masukkan ukuran gambar [panjang]x[lebar]',
+                                    `${img.width}x${img.height}`)
+                                alert(sip)
+                                window.URL.revokeObjectURL(img.src); // Free some memory
+                            });
+                            img.src = window.URL.createObjectURL(_file);
+
                             // 'file' comes from the Blob or File API
-                            setLoading(true)
-                            uploadBytes(storageRef, _file).then(() => {
-                                alert(`berhasil upload file ${_file.name}`)
-                                getData()
-                            }).catch((error) => {
-                                alert(`error ${error}`)
-                                setLoading(false)
-                            })
+                            // setLoading(true)
+                            // uploadBytes(storageRef, _file).then(() => {
+                            //     alert(`berhasil upload file ${_file.name}`)
+                            //     getData()
+                            // }).catch((error) => {
+                            //     alert(`error ${error}`)
+                            //     setLoading(false)
+                            // })
                         } else {
                             alert('gagal mendapatkan file')
                         }
@@ -64,11 +74,16 @@ function AddImgDialog(props: DialogProps) {
                 res.prefixes.forEach((folderRef) => {
                     console.log('folder', folderRef)
                 })
-                const images: string[] = []
+                let images: string[] = []
                 res.items.forEach((itemRef) => {
                     getDownloadURL(itemRef).then((x) => {
                         images.push(x)
                         const photoz: any[] = []
+                        images = images.sort((n1, n2) => {
+                            if (n1 > n2) return 1
+                            if (n1 < n2) return -1
+                            return 0;
+                        })
                         for (let i = 0; i < images.length; i++) {
                             photoz.push(<ImageDialog
                                 key={i}
@@ -118,16 +133,19 @@ interface ImageProps {
 }
 
 function ImageDialog(props: ImageProps) {
-    return <img
-        onClick={props.onClick}
-        style={{
-            'float': 'left',
-            'border': 'border: 1px solid red',
-            'cursor': 'pointer'
-        }}
-        width={250} height={125}
-        className='mr-2 mt-2'
-        src={props.url}></img>
+    return <div className='titleED containerED' style={{
+        'float': 'left',
+        'border': 'border: 1px solid red',
+        'cursor': 'pointer'
+    }}>
+        <img
+            onClick={props.onClick}
+            width={250} height={125}
+            className='mr-2 mt-2'
+            src={props.url}>
+        </img>
+        <i className="deleteED fa fa-trash fa-2x" aria-hidden="true"></i>
+    </div>
 
 }
 

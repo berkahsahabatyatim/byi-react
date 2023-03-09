@@ -1,6 +1,7 @@
 import ErrorBoundary from '../src/component/ErrorBoundary'
 import '../src/styles/lagacy.css'
 import '../src/styles/not-found.css'
+import '../src/styles/event-driven.css'
 import '../src/styles/sizes.css'
 import Script from 'next/script'
 import { useEffect } from 'react'

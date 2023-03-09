@@ -72,6 +72,7 @@ function Header() {
                                 <Link href={article3}>Syarat Wajib Zakat & Cara Menunaikannya</Link>
                                 <Link href={article4}>8 Golongan yang Berhak Menerima Zakat</Link>
                                 <Link href={article5}>13 Tips Memilih Hewan untuk Kurban</Link>
+                                <Link href={'/artikel'}>Lihat artikel lainnya</Link>
                             </div>
                         </div>
                     </li>

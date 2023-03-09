@@ -9,7 +9,7 @@ import { addDoc, collection, doc, getDocs, getFirestore, query, Timestamp, updat
 import { useRouter } from 'next/router';
 
 export const editKajian = (path) => {
-    return '/admin/kajian/edit/' + path;
+    return '/admin/kajian/edit/' + path
 }
 
 const ReactRTE = dynamic(() => import("../../../../src/component/RichTextEditor.tsx"), {
@@ -95,7 +95,7 @@ export default function KajianEditor({ data }) {
         setTimeout(() => {
             setSoha(true)
         }, 50)
-    }//npx react-codemod rename-unsafe-lifecycles
+    }
 
     return <div className='mx-5'>
         <AdminSeparator />
