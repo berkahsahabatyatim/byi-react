@@ -33,7 +33,7 @@ export default function Dokum({ data }) {
                 {data.map((a) => (
                     <div className="col-lg-3 col-md-4 col-xs-6 thumb mb-4" key={a.download_url}>
                         <a data-fancybox="gallery" href={a.download_url} rel="ligthbox" >
-                            <Image src={a.download_url} className="img-fluid zoom loadingImg" alt="" loading="lazy" height="300" width="300" />
+                            <Image src={a.download_url} className="img-fluid zoom loadingImg" alt={`silakan download di url ${a.download_url}`} loading="lazy" height="300" width="300" />
                         </a></div>))}
 
             </div>

@@ -46,7 +46,7 @@ export default function Article({ data }) {
     const { content, title } = data
     return (<div>
         <Helmet title={title}/>
-        <Masthead />
+        <Masthead title={title} desc={''}/>
         <div id="main-content">
             <div className="site-content mx-auto pt-5 col-lg-8 col-md-8 col-xs-8 col-10 text-justify text-dark">
                 <div className="entry-content">

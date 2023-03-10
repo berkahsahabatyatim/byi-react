@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import origin from "../src/constants";
+import AdminSeparator from "../src/component/AdminSeparator"
 
 function Notfound() {
     useEffect(() => {
@@ -98,7 +99,7 @@ function Notfound() {
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('nav');
 
-        burger.addEventListener('click', e => {
+        burger?.addEventListener('click', e => {
             burger.dataset.state === 'closed' ? burger.dataset.state = "open" : burger.dataset.state = "closed";
             nav.dataset.state === "closed" ? nav.dataset.state = "open" : nav.dataset.state = "closed";
         });
@@ -113,28 +114,8 @@ function Notfound() {
         height: "100%"
     }}>
         <Helmet />
-        <div className="hamburger-menu">
-            <button className="burger" data-state="closed">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <nav className="navf" data-state="closed">
-            <ul style={{
-                listStyleType: "none",
-                WebkitPaddingStart: "35px",
-                paddingInlineStart: "35px"
-            }}>
-                <li>
-                    <a href="https://berkahsahabatyatim.com/">Halaman Utama</a>
-                </li>
-                <li>
-                    <a href="https://berkahsahabatyatim.com/Donasi">Halaman Donasi</a>
-                </li>
-            </ul>
-        </nav>
         <main>
+            <AdminSeparator len={3}/>
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 align-self-center">

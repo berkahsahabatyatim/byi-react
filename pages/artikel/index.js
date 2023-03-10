@@ -1,10 +1,11 @@
-import { collection, getDocs, getFirestore, orderBy, Query, query } from 'firebase/firestore'
+import { collection, getDocs, getFirestore, orderBy, query } from 'firebase/firestore'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import dateFormat, { i18n } from 'dateformat'
 import Masthead from '../../src/component/Masthead'
+import Footer from '../../src/component/Footer'
 import origin from '../../src/constants'
 import { app, articleDb } from '../../src/service/firebase'
 
@@ -30,18 +31,16 @@ export default function ListArtikel({ data }) {
         const d = new Date(data[i].updatedAt.seconds * 1000);
         const date = dateFormat(d, "dddd, d mmmm yyyy, h:MM");
         items.push(
-            <div>
-                <div className='d-flex justify-content-between mt-3 mx-5' key={i}>
-                    <div>
-                        <Link href={`/artikel/${data[i].url}`}>
-                            <h4 className='mt-1'>{data[i].title}</h4>
-                        </Link>
-                        <h6>oleh: {data[i].updatedBy} pada {date}</h6>
-                    </div>
-                    {/* <div className='mt-3'>
+            <div className='d-flex justify-content-between mt-3 mx-5'>
+                <div>
+                    <Link href={`/artikel/${data[i].url}`}>
+                        <h4 className='mt-1'>{data[i].title}</h4>
+                    </Link>
+                    <h6>oleh: {data[i].updatedBy} pada {date}</h6>
+                </div>
+                {/* <div className='mt-3'>
                     <i className="fa fa-caret-right"></i>
                 </div> */}
-                </div>
             </div>
         )
     }
@@ -54,6 +53,7 @@ export default function ListArtikel({ data }) {
             <h3>List Artikel BYI</h3>
         </div>
         {items}
+        <Footer />
     </div>
 }
 

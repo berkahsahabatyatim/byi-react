@@ -16,7 +16,7 @@ class Footer extends Component {
                                 <div className="row">
                                     <div className="contact-list col-md-5 mb-3">
                                         <aside id="custom_html-3" className="widget_text widget widget_custom_html">
-                                            <h1 className="widget-title">Yayasan BYI</h1>
+                                            <h2 className="widget-title">Yayasan BYI</h2>
                                             <br />
                                             <div className="textwidget custom-html-widget">Berkah Yatim Indonesia adalah Yayasan Amal Non Profit Terdaftar di Kemenkumham RI yang fokus kepada pengelolaan dana sosial untuk Pondok tahfidz Al Quran Yatim dan Dhuafa di Indonesia.
                                                 <br /><br />
@@ -38,7 +38,7 @@ class Footer extends Component {
                                     </div>
                                     <div className="contact-list col-md-3  mb-3">
                                         <aside id="custom_html-4" className="widget_text widget widget_custom_html">
-                                            <h1 className="widget-title">Donasi</h1>
+                                            <h2 className="widget-title">Donasi</h2>
                                             <br />
                                             <div className="textwidget custom-html-widget">Salurkan bantuan Anda melalui Rekening yang telah kami sediakan :
                                                 <br /><br />
