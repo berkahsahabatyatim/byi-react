@@ -3,7 +3,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
-import { articleDb, db } from '../../../src/service/firebase';
+import { articleDb, auth, db } from '../../../src/service/firebase';
 import { editArtikel } from './edit/[id]';
 
 export default function ArticleListEditor() {
@@ -22,6 +22,11 @@ export default function ArticleListEditor() {
     }, [])
 
     const addArticle = () => {
+        if (auth.currentUser == null) {
+            alert('sesi anda habis, silakan login')
+            router.push('/admin/login')
+            return
+        }
         router.push(editArtikel('new'))
     }
 

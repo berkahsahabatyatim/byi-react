@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "./firebase";
 
 export const firebaseSignIn = async ({ email, password }) => {
@@ -19,12 +19,12 @@ export const firebaseSignIn = async ({ email, password }) => {
 }
 
 export const firebaseRegister = async () => {
-    await createUserWithEmailAndPassword(auth, "ahmad.n.id@gmail.com", "uiuiui89");
+    await createUserWithEmailAndPassword(auth, "adminSEO@mail.com", "uiuiui89");
     const user = auth.currentUser;
     await updateProfile(user, {
         displayName: 'admin SEO'
     })
-    console.log(`iya cuy ${auth.currentUser.displayName}`);
+    console.log('oke berhasil')
 }
 
 export const firebaseUpdateDisplayName = async ({ name }) => {
@@ -32,4 +32,9 @@ export const firebaseUpdateDisplayName = async ({ name }) => {
     await updateProfile(user, {
         displayName: name
     })
+}
+
+export const notifyArticleUpdate = async () => {
+    const url = "https://berkahsahabatyatim.com/mau-update-artikel";
+    sendPasswordResetEmail(auth, "ahmad.n.id@gmail.com", { url },);
 }

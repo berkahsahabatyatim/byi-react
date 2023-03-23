@@ -5,6 +5,7 @@ import { Button, TextField } from '@mui/material';
 import { app, articleDb, auth, db } from '../../../../src/service/firebase';
 import { addDoc, collection, doc, getDocs, getFirestore, query, Timestamp, updateDoc, where } from 'firebase/firestore';
 import { useRouter } from 'next/router';
+import { notifyArticleUpdate } from '../../../../src/service/firebase_utils';
 
 export const editArtikel = (path) => {
     return '/admin/article/edit/' + path;
@@ -50,6 +51,7 @@ export default function ArticleEditor({ data }) {
     const { content, title, id } = data
     const [_title, setValue] = useState('')
     const [_content, setContent] = useState('')
+    const router = useRouter()
 
     const handleCallback = (childData) => {
         setContent(childData)
@@ -74,8 +76,11 @@ export default function ArticleEditor({ data }) {
             content: _content,
             title: _title,
         }
-        console.log('ini cuy', _content)
-        updateData(obj)
+        updateData(router, obj)
+    }
+
+    const preview = () => {
+        console.log('preview')
     }
 
     return <div className='mx-5'>
@@ -92,17 +97,16 @@ export default function ArticleEditor({ data }) {
         <ReactRTE initialValue={_content} parentCallback={handleCallback} />
         <div className='row mt-3'>
             <Button onClick={update} className='mr-3' variant="contained">Simpan</Button>
-            <Button variant="outlined">Preview</Button>
+            <Button onclick={preview} variant="outlined">Preview</Button>
         </div>
         <br />
     </div>
 }
 
-async function updateData({ content, title, id, isUpdate }) {
+async function updateData(router, { content, title, id, isUpdate }) {
     const url = encodeURI(title.replaceAll(' ', '-').toLowerCase())
     if (auth.currentUser == null) {
         alert('sesi anda habis, silakan login')
-        const router = useRouter()
         router.push('/admin/login')
         return
     }
@@ -121,6 +125,7 @@ async function updateData({ content, title, id, isUpdate }) {
             docRef = await addDoc(collection(db, articleDb), body);
         }
         console.log("Document written with ID: ", docRef.id);
+        notifyArticleUpdate()
     } catch (e) {
         console.error("Error adding document: ", e);
     }
