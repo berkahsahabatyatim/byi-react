@@ -97,7 +97,7 @@ export default function ArticleEditor({ data }) {
         <ReactRTE initialValue={_content} parentCallback={handleCallback} />
         <div className='row mt-3'>
             <Button onClick={update} className='mr-3' variant="contained">Simpan</Button>
-            <Button onclick={preview} variant="outlined">Preview</Button>
+            <Button onClick={preview} variant="outlined">Preview</Button>
         </div>
         <br />
     </div>
@@ -125,6 +125,8 @@ async function updateData(router, { content, title, id, isUpdate }) {
             docRef = await addDoc(collection(db, articleDb), body);
         }
         console.log("Document written with ID: ", docRef.id);
+        alert("berhasil, artikel akan tampil beberapa saat lagi")
+        router.push('/admin')
         notifyArticleUpdate()
     } catch (e) {
         console.error("Error adding document: ", e);
