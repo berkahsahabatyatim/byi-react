@@ -11,8 +11,8 @@ export default function Legalitas() {
     const pendirian = "/assets/img/profil/Lampiran PENGESAHAN PENDIRIAN-1.jpg"
     const barcode = "/assets/img/profil/Akta berbarcode YBYI-1.jpg"
     const barcode2 = "/assets/img/profil/Akta berbarcode YBYI-2.jpg"
-    const legal1 = "/assets/img/profil/revisi-legalitas-1.jpg"
-    const legal2 = "/assets/img/profil/revisi-legalitas-2.jpg"
+    const legal1 = "/assets/img/profil/revisi-legalitas-2.jpg"
+    const legal2 = "/assets/img/profil/revisi-legalitas-1.jpg"
     const npwp = "/assets/img/profil/SK NPWP.jpg"
     const upz = "/assets/img/profil/UPZ1.jpg"
     const upz2 = "/assets/img/profil/UPZ2.jpg"
@@ -98,9 +98,6 @@ export default function Legalitas() {
                         </tbody>
                     </table>
                     <br />
-                    <div className="col-lg-12 text-center mb-4">
-                        <img src={pendirian} style={{ width: "100%" }} alt="pendirian" />
-                    </div>
                     <div className="col-lg-12 text-center mb-3">
                         <img src={barcode} style={{ width: "100%" }} alt="barcode" />
                     </div>
@@ -112,6 +109,9 @@ export default function Legalitas() {
                     </div>
                     <div className="col-lg-12 text-center mb-3">
                         <img src={legal2} style={{ width: "100%" }} alt="barcode" />
+                    </div>
+                    <div className="col-lg-12 text-center mb-4">
+                        <img src={pendirian} style={{ width: "100%" }} alt="pendirian" />
                     </div>
                     <div className="col-lg-12 text-center mb-3">
                         <img src={npwp} style={{ width: "100%" }} alt="npwp" />
