@@ -32,7 +32,7 @@ function Header() {
                     <li className="lispecial nav-item"><Link className="nav-link js-scroll-trigger" href={root}>Home</Link></li>
                     <li className="dropdown">
                         <div className="nav-item">
-                            <a className="lispecial nav-link js-scroll-trigger" href={root}> &nbsp;Tentang Kami &nbsp;</a>
+                            <a className="lispecial nav-link js-scroll-trigger" > &nbsp;Tentang Kami &nbsp;</a>
                             <div className="dropdown-content bg-dark">
                                 <Link href={profile + "#profil"}> Profil Yayasan BYI </Link>
                                 <Link href={visiMisi + "#profil"}>Visi Misi</Link>
@@ -65,7 +65,7 @@ function Header() {
                     {/* <li className="nav-item"><a className="nav-link js-scroll-trigger" href={`${kegiatan}#activity`}>Kegiatan</a></li> */}
                     <li className="dropdown">
                         <div className="nav-item">
-                            <a className="lispecial nav-link js-scroll-trigger" href={root}> &nbsp;Artikel&nbsp;</a>
+                            <a className="lispecial nav-link js-scroll-trigger" href={'/artikel'}> &nbsp;Artikel&nbsp;</a>
                             <div className="dropdown-content bg-dark">
                                 <Link href={article1}>Manfaat Sedekah</Link>
                                 <Link href={article2}>Keutamaan, Rukun & Syarat Wakaf</Link>
