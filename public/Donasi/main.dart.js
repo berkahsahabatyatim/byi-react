@@ -38793,7 +38793,7 @@ A.afg.prototype={
 $0(){},
 $S:0}
 A.afb.prototype={
-$0(){A.aji("https://berkahsahabatyatim.com/donasi/home#/"+this.a.f)},
+$0(){A.aji("https://berkahsahabatyatim.com/donasi/home#"+this.a.f)},
 $S:0}
 A.nD.prototype={
 ai(){return new A.PY(A.a([],t.TY),B.k)}}

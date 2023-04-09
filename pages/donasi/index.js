@@ -24,9 +24,11 @@ export default function Donasi() {
                             <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KRswZr858kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <br />
-                        <div class="container-iframe" >
-                            <iframe class="responsive-iframe" src="https://berkahsahabatyatim.com/donasi/home#/embed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                        <iframe
+                            src="https://berkahsahabatyatim.com/donasi/home#/embed"
+                            height="500"
+                            width="400"
+                            frameborder="0" />
                     </div>
                 </div>
             </div>
