@@ -15,20 +15,32 @@ export default function Program() {
                 <div className="entry-content">
                     <p class="text-center"><strong>Program Yayasan Berkah Yatim Indonesia</strong></p>
                     <div className="row">
-                        <div className="col-lg-1"/>
+                        <div className="col-lg-1" />
                         <div className="col-lg-10 mx-3">
                             <ul style={{ "listStyleType": "decimal" }}>
-                                <li>Pembebasan Lahan Wakaf untuk Jalan</li>
-                                <li>Pembangunan Asrama Pondok Tahfidz Yatim Dhuafa</li>
-                                <li>Pembiayaan Operasional Santri Pondok Tahfidz Yatim Dhuafa</li>
+                                <li>
+                                    <a href="/donasi/home.html#/wakaf-lahan">Pembebasan Lahan Wakaf untuk Jalan</a>
+                                </li>
+                                <li>
+                                    <a href="/donasi/home.html#/wakaf-lahan">Pembangunan Asrama Pondok Tahfidz Yatim Dhuafa</a>
+                                </li>
+                                <li>
+                                    <a href="/donasi/home.html#/tahfidz-yatim">Pembiayaan Operasional Santri Pondok Tahfidz Yatim Dhuafa</a>
+                                </li>
                                 <li>Beasiswa Sekolah Tahfidz Qur'an</li>
-                                <li>Santunan 1000 Anak Yatim</li>
-                                <li>Pemberdayaan Ekonomi Masyarakat Dhuafa</li>
-                                <li>Kafalah Du'at untuk Relawan Quran</li>
+                                <li>
+                                    <a href="/donasi/home.html#/tajil-yatim">Santunan 1000 Anak Yatim</a>
+                                </li>
+                                <li>
+                                    <a href="/donasi/home.html#/santunan-gempa-bumi">Pemberdayaan Ekonomi Masyarakat Dhuafa</a>
+                                </li>
+                                <li>
+                                    <a href="/donasi/home#/santunan-guru-ngaji">Kafalah Du'at untuk Relawan Quran</a>
+                                </li>
                                 <li>Gebyar Ramadhan 1444 H</li>
                             </ul>
                         </div>
-                        <div className="col-lg-1"/>
+                        <div className="col-lg-1" />
                     </div>
                     <br />
                 </div>
