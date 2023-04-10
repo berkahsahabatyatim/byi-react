@@ -4,8 +4,8 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "e1c98f8f903e8d79f461d2c5a40bf89e",
-"index.html": "2d67e52984a09f927385c147e596e49d",
-"/": "2d67e52984a09f927385c147e596e49d",
+"index.html": "8aed585b1e53255ed891259d4a10cdff",
+"/": "8aed585b1e53255ed891259d4a10cdff",
 "main.dart.js": "9a7250168d50f466edbd1c67231d0b3b",
 "flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
 "favicon.png": "22f347997df00585ac2c835a0fa3afa4",
@@ -38,7 +38,7 @@ const RESOURCES = {
 "assets/assets/img/program/zakatFitrah.jpeg": "edf2cdecde1629564686d2778571e8af",
 "assets/assets/img/program/profesi.jpeg": "768596648b4c2709ee36ff67460348a2",
 "assets/assets/img/program/tanah.jpg": "8514ada6ec6aa5e9c75f729ff7c27d31",
-"assets/assets/img/program/rYatimTajil.jpeg": "2d443346c308b2b2970975ca90f83af5",
+"assets/assets/img/program/rYatimTajil.jpeg": "614587e7c4551701a7005d0aafba3666",
 "assets/assets/img/program/rYatimTHR.jpeg": "1592a4cb7e9f4a5740a28c7af8bf3711",
 "assets/assets/img/program/rDuat.jpeg": "e5d8e8e08491efece6843a016c706b46",
 "assets/assets/img/program/zakat.jpg": "67a1527194cc776f78cf4912eda4cbc8",

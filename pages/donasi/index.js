@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Footer from "../../src/component/Footer"
 import Masthead from "../../src/component/Masthead"
 import origin from "../../src/constants"
@@ -10,6 +10,20 @@ export default function Donasi() {
     const bsi = "/assets/img/bsi.png"
     const mandiri = "/assets/img/mandiri.jpg"
     const bni = "/assets/img/bni.jpg"
+    const [width, setWidth] = useState(600)
+    const [done, setDone] = useState(false)
+
+    useEffect(() => {
+        if (window !== undefined) {
+            const _w = window.screen.width;
+            if (_w < 600) {
+                const newVal = _w - 20
+                setWidth(newVal)
+            }
+        }
+        setDone(true)
+    }, [])
+
     return (<div>
         <Helmet />
         <Masthead bg="donasi" buttonLabel="Lihat Profil" target="#donate" />
@@ -23,16 +37,23 @@ export default function Donasi() {
                         <div class="container-iframe" >
                             <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KRswZr858kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
+                        <div class="text-dark mt-4 mb-4">
+                            Salurkan donasi terbaik Anda pada pilihan penggalangan dana kami di bawah ini
+                        </div>
                         <br />
                     </div>
                 </div>
             </div>
-            <div class="mx-3">
-                <iframe
-                src="https://berkahsahabatyatim.com/donasi/home#/embed"
-                height="500"
-                width="100%"
-                frameborder="0" />
+            <div class="row mx-3 justify-content-center">
+                {!done ? <br /> : <iframe
+                    style={{
+                        "overflow": "hidden",
+                        "display": "block",
+                        "pointerEvents": "none"
+                    }}
+                    height="1800"
+                    width={width}
+                    src="https://berkahsahabatyatim.com/donasi/home#/embed" />}
             </div>
         </section>
         <Footer />
