@@ -1,8 +1,14 @@
 [build]
     command = "yarn build && yarn export"
     publish = "out"
+    functions = "dist/server"
 
 [[redirects]]
   from = "/*"
   to = "/404"
   status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"

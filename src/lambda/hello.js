@@ -1,9 +1,26 @@
-// this uses the callback syntax, however, we encourage you to try the async/await syntax shown in async-dadjoke.js
-export function handler(event, context, callback) {
-    console.log('queryStringParameters', event.queryStringParameters)
-    callback(null, {
-      statusCode: 200,
-      body: JSON.stringify({ msg: 'Hello, World!' }),
-    })
+import axios from "axios"
+const { NETLIFY_NEXT_MIDTRANS, NETLIFY_NEXT_MIDTRANS_STAG } = process.env
+
+export async function handler(event, context, callback) {
+  const url = event.queryStringParameters['url'];
+  const isProd = `${url}`.includes("sandbox") === false
+  let token = NETLIFY_NEXT_MIDTRANS_STAG
+  if (isProd) token = NETLIFY_NEXT_MIDTRANS
+  const body = JSON.parse(event.body);
+  const headerz = {
+    'Authorization': `Basic ${token}`,
+    'Content-Type': 'application/json',
   }
-  
+  console.log(`body ${JSON.stringify(body)}`)
+  console.log(`headers ${JSON.stringify(event.headers)}`);
+  console.log(`pake ${JSON.stringify(headerz)}`);
+  const response = await axios.post(url,
+    body,
+    {
+      headers: headerz
+    })
+  callback(null, {
+    statusCode: response.status,
+    body: JSON.stringify(response.data),
+  })
+}
