@@ -38843,7 +38843,7 @@ XD(){var s=this,r=null,q=A.bB(r,8,r),p=A.av("Data Donatur",r,r,r,B.N5,r,r),o=A.b
 return new A.cw(B.mR,A.cS(A.a([q,p,o,n,m,l,k,i,h,g,f,e,d,A.e9(!1,!0,A.aI(B.U,A.c4(A.a([s.z?A.aI(r,A.app(B.i),r,r,r,30,r,r,r,30):A.av("Submit Data",r,r,r,A.bl(r,r,B.i,r,r,r,r,r,r,r,r,r,r,r,B.E,r,r,!0,r,r,r,r,r,r,r,r),r,r)],j),B.q,B.r,B.c0,r),r,r,new A.c9(B.al,r,a,b,r,r,B.P),r,r,r,new A.a3(0,8,0,8),c),r,!0,r,r,r,r,r,r,r,r,r,new A.acV(s),r,r,r,r)],j),B.bi,B.r,B.o),r)},
 CC(){var s=0,r=A.X(t.Wd),q,p=this,o,n,m,l,k,j,i
 var $async$CC=A.Y(function(a,b){if(a===1)return A.U(b,r)
-while(true)switch(s){case 0:o=A.kN("https://majestic-cat-8077af.netlify.app/.netlify/functions/hello?url=https://app.midtrans.com/snap/v1/transactions",0,null)
+while(true)switch(s){case 0:o=A.kN("https://berkahsahabatyatim.com/.netlify/functions/hello?url=https://app.midtrans.com/snap/v1/transactions",0,null)
 n=t.N
 m=A.ae(["Content-Type","application/json"],n,n)
 l=Date.now()
