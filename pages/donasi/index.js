@@ -27,26 +27,26 @@ export default function Donasi() {
     return (<div>
         <Helmet />
         <Masthead bg="donasi" buttonLabel="Lihat Profil" target="#donate" />
-        <section class="page-section bg-light" id="donate">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 text-center">
-                        <div class="text-dark mt-4 mb-4">
+        <section className="page-section bg-light" id="donate">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-10 text-center">
+                        <div className="text-dark mt-4 mb-4">
                             Rancangan dan Perencanaan Yayasan Berkah Yatim Indonesia
                         </div>
-                        <div class="container-iframe" >
-                            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KRswZr858kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div className="container-iframe" >
+                            <iframe className="responsive-iframe" src="https://www.youtube.com/embed/KRswZr858kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <div class="text-dark mb-3">
+                        <div className="text-dark mb-3">
                             Salurkan bantuan Anda dalam mendukung program-program yayasan melalui portal donasi berikut
                         </div>
                         <a href="../Donasi/home.html">
-                            <div class="btn btn-primary mb-3">Web Donasi</div>
+                            <div className="btn btn-primary mb-3">Web Donasi</div>
                         </a>
-                        <div class="text-dark">
+                        <div className="text-dark">
                             atau langsung melalui Rekening (a.n Yayasan Berkah Yatim Indonesia)
                         </div>
-                        <div class="text-dark mb-3">
+                        <div className="text-dark mb-3">
                             yang telah kami sediakan :
                         </div>
                         <img className="mr-1" src={bsi} height="20" alt="BSI"></img>Rekening BSI (451): <span className="js-copy-bsm-btn" >714 8434 306</span><br />
@@ -56,14 +56,14 @@ export default function Donasi() {
                         <img className="mr-1" src={bni} height="20" alt="BNI"></img>Rekening BNI (009):     <span className="js-copy-bni-btn">118 0279 271</span> <br />
                         <br />
                         a.n <i>Yayasan Berkah Yatim Indonesia</i>
-                        <div class="text-dark mb-2">
+                        <div className="text-dark mb-2">
                             Konfirmasi donasi melalui kontak:
                         </div>
-                        <div class="col-lg-12 mb-2">
-                            <a class="btn btn-primary" href="tel:+6281912002001">Telepon</a>
+                        <div className="col-lg-12 mb-2">
+                            <a className="btn btn-primary" href="tel:+6281912002001">Telepon</a>
                         </div>
-                        <div class="col-lg-12 mb-2">
-                            <a class="btn btn-primary " href="https://wa.me/6281912002001">Whatsapp</a>
+                        <div className="col-lg-12 mb-2">
+                            <a className="btn btn-primary " href="https://wa.me/6281912002001">Whatsapp</a>
                         </div>
                         <br />
                     </div>
