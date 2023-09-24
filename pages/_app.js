@@ -9,16 +9,16 @@ import { useEffect } from 'react'
 export default function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
-    var prevScrollpos = window.pageYOffset;
+    let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("mainNav").style.top = "0";
       } else {
         document.getElementById("mainNav").style.top = "-50px";
       }
       prevScrollpos = currentScrollPos;
-    }
+    };
   }, [])
 
   return (<>

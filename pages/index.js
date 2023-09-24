@@ -4,6 +4,7 @@ import Masthead from '../src/component/Masthead'
 import Head from 'next/head'
 import { useRouter } from "next/router"
 import origin from "../src/constants"
+import ThemeRegistry from "../src/component/theme-registry/ThemeRegistry";
 
 class Home extends Component {
 

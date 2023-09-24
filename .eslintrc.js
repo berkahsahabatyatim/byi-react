@@ -29,7 +29,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "react"],
+  plugins: ["@typescript-eslint", "react", "jsx-a11y"],
   rules: {
     "react/no-unknown-property": ["error", { ignore: ["css"] }],
   },
