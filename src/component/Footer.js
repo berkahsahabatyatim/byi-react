@@ -40,15 +40,18 @@ class Footer extends Component {
                                         <aside id="custom_html-4" className="widget_text widget widget_custom_html">
                                             <h2 className="widget-title">Donasi</h2>
                                             <br />
-                                            <div className="textwidget custom-html-widget">Salurkan bantuan Anda melalui Rekening yang telah kami sediakan :
-                                                <br /><br />
+                                            <div className="textwidget custom-html-widget"><h6>Salurkan bantuan Anda melalui rekening resmi di bawah ini <br/>a.n <i>Yayasan Berkah Yatim Indonesia</i>:</h6>
+                                                <br />
                                                 <img className="mr-1" src={bsi} height="20" alt="BSI"></img>Rekening BSI (451): <br />
                                                 <span className="js-copy-bsm-btn" >714 8434 306</span> <br />
                                                 <img className="mr-1" src={mandiri} height="20" alt="Mandiri"></img>Mandiri (008): <br />
                                                 <span className="js-copy-mandiri-btn" >182 000 664 5022</span> <br />
                                                 <img className="mr-1" src={bni} height="20" alt="BNI"></img>Rekening BNI (009): <br />
                                                 <span className="js-copy-bni-btn">118 0279 271</span> <br /><br />
-                                                a.n <i>Yayasan Berkah Yatim Indonesia</i>
+                                                
+                                                <h6>Salurkan zakat Anda melalui rekening <br/>UPZ Berkah Yatim Indonesia:</h6>
+                                                <img className="mr-1" src={bsi} height="20" alt="BSI"></img>Rekening BSI (451): <br />
+                                                <span className="js-copy-bsm-btn" >723 1936 167</span> <br />
                                             </div>
                                         </aside>
                                     </div>
