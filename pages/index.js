@@ -157,7 +157,7 @@ class Home extends Component {
 function Helmet() {
     const title = "Berkah Sahabat Yatim"
     const desc = "Membangun Generasi Qurani, Berkarakter Dan Visioner Yang Berpegang Teguh Pada Al Qur'an & Sunnah"
-    const img = "https://raw.githubusercontent.com/nashihu/production_stuff/master/bsy_images/2020-01-24%2018.19.45.jpeg"
+    const img = "https://berkahsahabatyatim.com/assets/img/bg-masterhead.jpg"
     const { asPath } = useRouter();
     const URL = `${origin()}${asPath}`;
     return (<Head>
