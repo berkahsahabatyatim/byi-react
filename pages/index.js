@@ -5,7 +5,63 @@ import Head from 'next/head'
 import { useRouter } from "next/router"
 import origin from "../src/constants"
 
+const popupStyles = `
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+        max-width: 90vw;  /* Changed from 220px to 90% of viewport width */
+        width: 90%;       /* Added to ensure consistent width */
+    }
+
+    .popup-close {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        width: 30px;
+        height: 30px;
+        background: #ff4444;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .popup-close:hover {
+        background: #ff0000;
+    }
+`;
+
 class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showPopup: true // Set to true to show popup on page load
+        };
+    }
+
+    handleClosePopup = () => {
+        this.setState({ showPopup: false });
+    }
 
     render() {
         const full1 = '/assets/img/portfolio/fullsize/1.jpg'
@@ -23,6 +79,20 @@ class Home extends Component {
 
         return (
             <div>
+                {this.state.showPopup && (
+                    <div className="popup-overlay">
+                        <div className="popup-content">
+                            <button className="popup-close" onClick={this.handleClosePopup}>×</button>
+                            <a href="https://wa.me/6281912002001?text=halo%20saya%20ingin%20wakaf%20tanah">
+                                <img 
+                                    src="/Donasi/assets/assets/img/program/lahan.jpeg" 
+                                    alt="Popup"
+                                    style={{ cursor: 'pointer', width: '100%', height: 'auto' }}
+                                />
+                            </a>
+                        </div>
+                    </div>
+                )}
                 <Helmet />
                 <Masthead buttonLabel="Lihat Lebih Lanjut" target="#about" />
                 <section className="page-section bg-primary" id="about">
@@ -168,6 +238,7 @@ function Helmet() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
         <meta property="og:image" content={img} />
+        <style>{popupStyles}</style>
     </Head>)
 }
 
