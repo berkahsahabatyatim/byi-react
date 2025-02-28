@@ -24,8 +24,16 @@ const popupStyles = `
         padding: 20px;
         border-radius: 8px;
         position: relative;
-        max-width: 90vw;  /* Changed from 220px to 90% of viewport width */
-        width: 90%;       /* Added to ensure consistent width */
+        max-width: 500px;     /* Fixed max-width for desktop */
+        width: 90%;          /* Percentage width for mobile */
+        max-height: 90vh;    /* Maximum height of 90% viewport height */
+        margin: auto;        /* Center the content */
+    }
+
+    .popup-content img {
+        max-height: 80vh;    /* Maximum image height */
+        object-fit: contain; /* Maintain aspect ratio */
+        width: 100%;
     }
 
     .popup-close {
